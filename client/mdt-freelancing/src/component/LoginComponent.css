@@ -1,129 +1,128 @@
+
 #Login {
-    width: 1000px; 
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    font-size: 20px;
+  width: 60vw;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: 20px;
+  height: 100%;
 }
 
 .login {
-    background: linear-gradient(to right, #5C59C3, #9AD3CC);  
-    height: 716px;
-  }
+  background: linear-gradient(to right, #5c59c3, #9ad3cc);
+  height: 100%;
+  overflow: hidden;
+}
 
 #Login input[type="submit"] {
-    background-color: #5C59C3; 
-    color: white; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 50px; 
-    cursor: pointer;
-    margin-left: 410px;
-    font-size: 25px;
+  background-color: #5c59c3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: auto;
+  font-size: 25px;
 }
-  
+
 #Login input[type="submit"]:hover {
-    background-color: #807cf9;
-    transition: background-color 0.3s ease-out;
-    text-align: center;
+  background-color: #807cf9;
+  transition: background-color 0.3s ease-out;
+  text-align: center;
 }
 
 #Login input[type="submit"]:active {
-    scale: 0.9;
+  scale: 0.9;
 }
 
 #Login input[type="text"] {
-    width: 100%; 
-    padding: 10px; 
-    margin-bottom: 50px;
-    border-radius: 10px; 
-    font-size: 15px;
-
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  font-size: 15px;
 }
 
 #Login input[type="password"] {
-    width: 100%; 
-    padding: 10px; 
-    margin-bottom: 10px;
-    border-radius: 10px;
-    font-size: 15px; 
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 15px;
 }
 
 #Login input[type="checkbox"] {
-    margin-right: 10px; 
-  }
-  
-#Login  a:hover {
-    color: red; 
-  }
+  margin-right: 10px;
+}
 
-/* CSS สำหรับมือถือ */
-@media only screen and  (max-width: 560px) {
-    #Login form {
-        width: 85%; 
-        margin: 50px auto; 
-        padding: 10px;
-        font-size: 18px; 
-      }
-    
-      #Login .login {
-        height: 41rem; 
-      }
-    
-      #Login input[type="submit"] {
-        margin-left: 4rem; 
-        font-size: 20px; 
-      }
-    
-      #Login  input[type="text"],
-     #Login input[type="password"] {
-        width: 100%;
-        margin-bottom: 20px; 
-      }
-    
-      #Login input[type="checkbox"] {
-        margin-right: 5px; 
-      }
-    
-      #Login a:hover {
-        color: red; 
-      }
-    }
+#Login a:hover {
+  color: red;
+}
 
 
 /* CSS สำหรับไอแพด */
 @media only screen and (max-width: 950px) {
-  #Login form {
-      width: 80%; 
-      margin: 20px auto;
-      padding: 15px;
-      font-size: 18px; 
-    }
-  
-    #Login  .login {
-      height: 950px; 
-    }
-  
-    #Login input[type="submit"] {
-      margin-left:30px;
-      font-size: 20px;
-    }
-  
-    #Login input[type="text"],
-    #Login input[type="password"] {
-      width: 100%; 
-      margin-bottom: 20px; 
-    }
-  
-    #Login input[type="checkbox"] {
-      margin-right: 5px; 
-    }
-  
-    #Login a:hover {
-      color: red; 
-    }
+  #Login {
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px;
+    font-size: 18px;
   }
-  
 
+  .login {
+    height: 100%;
+  }
 
+  #Login input[type="submit"] {
+    margin-left: 30px;
+    font-size: 20px;
+  }
+
+  #Login input[type="text"],
+  #Login input[type="password"] {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #Login input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  #Login a:hover {
+    color: red;
+  }
+}
+
+/* CSS สำหรับมือถือ */
+@media only screen and (max-width: 560px) {
+  #Login {
+    width: 85%;
+    margin: 50px auto;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .login {
+
+  }
+
+  #Login input[type="submit"] {
+    margin-left: 4rem;
+    font-size: 20px;
+  }
+
+  #Login input[type="text"],
+  #Login input[type="password"] {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #Login input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  #Login a:hover {
+    color: red;
+  }
+}

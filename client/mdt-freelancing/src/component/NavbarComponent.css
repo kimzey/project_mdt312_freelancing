@@ -21,7 +21,6 @@ nav{
 }
 
 nav .menu .list {
-    
     width: 100%;
     height: 100%;
     display: flex;
@@ -37,28 +36,33 @@ nav .list a{
     border-radius: 1rem;
     margin-right: 1rem;
 }
-nav .list a:hover{
-    opacity: 0.8;
-    color: var(--text-color);
-    background-color: var(--primary-color);
-} 
-nav .list a:active{
-    scale: 0.9;
-} 
 
 nav .menu #btn-menu {
     display: none;
     cursor: pointer;
-    color: var(--text-color);
+    color: var(--text-colors-second);
     font-size:var(--font-topic);
     text-decoration: none;
     padding: 1rem;
 }
+nav .list a:hover{
+    opacity: 0.8;
+    padding: 0.5rem;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+} 
 
-nav .menu #btn-menu:active{
-    scale: 0.8;
+nav .list a:active{
+    scale: 0.9;
+} 
+
+nav .menu a:hover{
+    filter: drop-shadow(0 0 2rem var(--primary-color));
 }
 
+body.show{
+    transform: translateX( var(--menu_show));
+}
 
 /* CSS สำหรับ ipad */
 
@@ -66,20 +70,22 @@ nav .menu #btn-menu:active{
     :root{
         --font-topic:3rem;
         --font-content:1.5rem;
+        --width-item:80vw;
     }
     nav{
-        justify-content: start !important;
+        justify-content: start;
     }
     nav .menu #btn-menu{
-        display: flex;
         color: black;
+        display: flex;
+        
     } 
     .menu .list{
         position: fixed;
         top: 0;
         left: 0;
         width: var(--menu_show) !important;
-        height: 100vh !important;
+        height: 100%;
         background-color: var(--primary-color);
         transform: translateX(-100%);
     }
@@ -99,16 +105,14 @@ nav .menu #btn-menu:active{
         width: 100%;
     }
 
-    body.show{
-        transform: translateX( var(--menu_show));
-    }
 }
 
   /* CSS สำหรับมือถือ */
-@media only screen and  (max-width: 560px) {
+@media only screen and (max-width: 560px) {
     :root{
         --font-topic:2.5rem;
         --font-content:1rem;
+        --width-item:90vw;
     }
     nav .menu #btn-menu{
         display: flex;
@@ -119,7 +123,7 @@ nav .menu #btn-menu:active{
         top: var(--nav-height);
         left: 0;
         width: 100% !important;
-        height: 100vh !important;
+        height: 100%;
         background-color: var(--primary-color);
         transform: translateX(-100%);
     }
@@ -127,7 +131,7 @@ nav .menu #btn-menu:active{
     .menu .list a{
         font-size: var(--font-topic);
     }
-    
+
     body.show .list{
         transform: translateX(0);
     }
@@ -135,5 +139,6 @@ nav .menu #btn-menu:active{
     body.show{
         transform: translateX(0);
     }
+
 }
 

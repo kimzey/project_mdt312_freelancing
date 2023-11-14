@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav>
         <div className="menu">
             <div className="list">
-                <Link to="/Home" >Home</Link>
+                <Link to="/" >Home</Link>
                 <Link to="#Profile">Profile</Link>
                 <Link to="#About">About</Link>
                 <Link to="/Login">Login</Link>
