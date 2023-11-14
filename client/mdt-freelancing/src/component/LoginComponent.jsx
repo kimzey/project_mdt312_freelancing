@@ -23,7 +23,7 @@ export default function Login() {
 
        <br/> <input type="submit" value="เข้าสู่ระบบ" /> <br/>
 
-       <br/>  หรือยังไม่เคย <a href="#">ลงทะเบียน</a> ?  <br/> 
+       <br/>  หรือยังไม่เคย <a href="/Register">ลงทะเบียน</a> ?  <br/> 
     
 
     </form>
