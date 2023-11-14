@@ -1,6 +1,5 @@
 import "./NavbarComponent.css";
-import { useEffect } from "react";
-
+import {Link} from "react-router-dom"
 export default function Navbar() {
 
     const add_show = ()=>{
@@ -9,14 +8,14 @@ export default function Navbar() {
 
   return (
     <nav>
-        <div class="menu">
-            <div class="list">
-                <a href="#Home">Home</a>
-                <a href="#Profile">Profile</a>
-                <a href="#About">About</a>
-                <a href="#Login">Login</a>
+        <div className="menu">
+            <div className="list">
+                <Link to="/Home" >Home</Link>
+                <Link to="#Profile">Profile</Link>
+                <Link to="#About">About</Link>
+                <Link to="/Login">Login</Link>
             </div>
-            <a href="#" id="btn-menu" onClick={add_show}>=</a>
+            <Link to="#" id="btn-menu" onClick={add_show}>=</Link>
         </div>
     </nav>
   );

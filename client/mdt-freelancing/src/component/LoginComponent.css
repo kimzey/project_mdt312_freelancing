@@ -1,4 +1,4 @@
-form {
+#Login {
     width: 1000px; 
     margin: 50px auto;
     padding: 20px;
@@ -12,7 +12,7 @@ form {
     height: 716px;
   }
 
-input[type="submit"] {
+#Login input[type="submit"] {
     background-color: #5C59C3; 
     color: white; 
     padding: 10px 20px; 
@@ -23,17 +23,17 @@ input[type="submit"] {
     font-size: 25px;
 }
   
-  input[type="submit"]:hover {
+#Login input[type="submit"]:hover {
     background-color: #807cf9;
     transition: background-color 0.3s ease-out;
     text-align: center;
 }
 
-input[type="submit"]:active {
+#Login input[type="submit"]:active {
     scale: 0.9;
 }
 
-input[type="text"] {
+#Login input[type="text"] {
     width: 100%; 
     padding: 10px; 
     margin-bottom: 50px;
@@ -42,7 +42,7 @@ input[type="text"] {
 
 }
 
-input[type="password"] {
+#Login input[type="password"] {
     width: 100%; 
     padding: 10px; 
     margin-bottom: 10px;
@@ -50,44 +50,43 @@ input[type="password"] {
     font-size: 15px; 
 }
 
-input[type="checkbox"] {
-    transform: scale(1.5); 
+#Login input[type="checkbox"] {
     margin-right: 10px; 
   }
   
-  a:hover {
+#Login  a:hover {
     color: red; 
   }
 
 /* CSS สำหรับมือถือ */
 @media only screen and  (max-width: 560px) {
-    form {
+    #Login form {
         width: 85%; 
         margin: 50px auto; 
         padding: 10px;
         font-size: 18px; 
       }
     
-      .login {
+      #Login .login {
         height: 41rem; 
       }
     
-      input[type="submit"] {
+      #Login input[type="submit"] {
         margin-left: 4rem; 
         font-size: 20px; 
       }
     
-      input[type="text"],
-      input[type="password"] {
+      #Login  input[type="text"],
+     #Login input[type="password"] {
         width: 100%;
         margin-bottom: 20px; 
       }
     
-      input[type="checkbox"] {
+      #Login input[type="checkbox"] {
         margin-right: 5px; 
       }
     
-      a:hover {
+      #Login a:hover {
         color: red; 
       }
     }
@@ -95,33 +94,33 @@ input[type="checkbox"] {
 
 /* CSS สำหรับไอแพด */
 @media only screen and (max-width: 950px) {
-    form {
+  #Login form {
       width: 80%; 
       margin: 20px auto;
       padding: 15px;
       font-size: 18px; 
     }
   
-    .login {
+    #Login  .login {
       height: 950px; 
     }
   
-    input[type="submit"] {
+    #Login input[type="submit"] {
       margin-left:30px;
       font-size: 20px;
     }
   
-    input[type="text"],
-    input[type="password"] {
+    #Login input[type="text"],
+    #Login input[type="password"] {
       width: 100%; 
       margin-bottom: 20px; 
     }
   
-    input[type="checkbox"] {
+    #Login input[type="checkbox"] {
       margin-right: 5px; 
     }
   
-    a:hover {
+    #Login a:hover {
       color: red; 
     }
   }
