@@ -1,0 +1,130 @@
+form {
+    width: 1000px; 
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-size: 20px;
+}
+
+.login {
+    background: linear-gradient(to right, #5C59C3, #9AD3CC);  
+    height: 716px;
+  }
+
+input[type="submit"] {
+    background-color: #5C59C3; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 50px; 
+    cursor: pointer;
+    margin-left: 410px;
+    font-size: 25px;
+}
+  
+  input[type="submit"]:hover {
+    background-color: #807cf9;
+    transition: background-color 0.3s ease-out;
+    text-align: center;
+}
+
+input[type="submit"]:active {
+    scale: 0.9;
+}
+
+input[type="text"] {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 50px;
+    border-radius: 10px; 
+    font-size: 15px;
+
+}
+
+input[type="password"] {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 15px; 
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5); 
+    margin-right: 10px; 
+  }
+  
+  a:hover {
+    color: red; 
+  }
+
+/* CSS สำหรับมือถือ */
+@media only screen and  (max-width: 560px) {
+    form {
+        width: 85%; 
+        margin: 50px auto; 
+        padding: 10px;
+        font-size: 18px; 
+      }
+    
+      .login {
+        height: 41rem; 
+      }
+    
+      input[type="submit"] {
+        margin-left: 4rem; 
+        font-size: 20px; 
+      }
+    
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        margin-bottom: 20px; 
+      }
+    
+      input[type="checkbox"] {
+        margin-right: 5px; 
+      }
+    
+      a:hover {
+        color: red; 
+      }
+    }
+
+
+/* CSS สำหรับไอแพด */
+@media only screen and (max-width: 950px) {
+    form {
+      width: 80%; 
+      margin: 20px auto;
+      padding: 15px;
+      font-size: 18px; 
+    }
+  
+    .login {
+      height: 950px; 
+    }
+  
+    input[type="submit"] {
+      margin-left:30px;
+      font-size: 20px;
+    }
+  
+    input[type="text"],
+    input[type="password"] {
+      width: 100%; 
+      margin-bottom: 20px; 
+    }
+  
+    input[type="checkbox"] {
+      margin-right: 5px; 
+    }
+  
+    a:hover {
+      color: red; 
+    }
+  }
+  
+
+
