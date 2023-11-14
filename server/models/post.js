@@ -21,6 +21,10 @@ const postSchema = mongoose.Schema({
         type:String,
         lowercase:true,
         unique:true,
+    },
+    img_post:{
+        type:String,
+        unique:true
     }
 },{timestamps:true})
 

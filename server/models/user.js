@@ -44,10 +44,8 @@ const userSchema = mongoose.Schema({
             type:String
         }
     },
-    slug:{
-        type:String,
-        lowercase:true,
-        unique:true,
+    is_admin:{
+        type:String
     }
 },{timestamps:true})
 
