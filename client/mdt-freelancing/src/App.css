@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+
+:root{
+    --menu_show:35vw;
+    --nav-height: 10vh;
+    --font-topic:5rem;
+    --font-content:2rem;
+    --width-item:60vw;
+    --primary-color:rgb(3, 114, 240);;
+    --text-color:white;
+    --text-color-second:rgb(0, 0, 0);
+    --background:#0d0d0e;
+    --background-second:rgb(255,255,255);
+    --background-content:#171718;
+    --nav: transparent;
+    --shadow:none;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+    scroll-behavior: smooth;
+}
