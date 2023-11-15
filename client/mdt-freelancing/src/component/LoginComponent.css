@@ -1,7 +1,7 @@
-#Login {
+#Login{
   width: 1000px;
   margin: 50px auto;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
   background-color: #ffffff;
   font-size: 20px;
@@ -9,7 +9,7 @@
 
 .login {
   background: linear-gradient(to right, #5c59c3, #9ad3cc);
-  height: 716px;
+  height: 750px;
 }
 
 #Login input[type="submit"] {
@@ -21,11 +21,12 @@
   cursor: pointer;
   margin-left: 410px;
   font-size: 25px;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+
 }
 
 #Login input[type="submit"]:hover {
   background-color: #807cf9;
-  transition: background-color 0.3s ease-out;
   text-align: center;
 }
 
@@ -50,7 +51,6 @@
 }
 
 #Login input[type="checkbox"] {
-  scale: 1.5;
   margin-right: 10px;
 }
 
@@ -68,11 +68,11 @@
   }
 
   .login {
-    height: 41rem;
+    height: 3rem;
   }
 
   #Login input[type="submit"] {
-    margin-left: 4rem;
+    margin-left: 500px;
     font-size: 20px;
   }
 
@@ -84,6 +84,7 @@
 
   #Login input[type="checkbox"] {
     margin-right: 5px;
+    
   }
 
   #Login a:hover {
@@ -101,7 +102,7 @@
   }
 
   .login {
-    height: 950px;
+    height: 900px;
   }
 
   #Login input[type="submit"] {

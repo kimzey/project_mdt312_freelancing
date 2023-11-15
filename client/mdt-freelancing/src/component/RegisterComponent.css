@@ -1,0 +1,140 @@
+.register {
+  background: linear-gradient(to right, #5c59c3, #9ad3cc);
+  height: 190vh;
+}
+
+.register-form {
+  width: 1000px; 
+  margin: 40px auto;
+  padding: 40px; 
+  border-radius: 15px;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+.required-info {
+
+  margin-bottom: 40px; 
+}
+
+.required-message {
+  color: #ff0000;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px; 
+
+}
+
+label {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+#firstname {
+  margin-right: 15px; 
+}
+
+input {
+  flex-grow: 1; 
+  padding: 10px; 
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px; 
+}
+
+.form-button{
+  text-align: center;
+}
+
+button {
+  background-color: #5c59c3;
+  color: white;
+  padding: 15px; 
+  border: none;
+  font-size: 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 20px auto; 
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+button:hover {
+  background-color: #807cf9;
+}
+
+button:active {
+   scale:0.9;
+}
+
+/* CSS สำหรับมือถือ */
+@media only screen and (max-width: 560px) {
+  .register-form {
+    width: 90%; 
+    padding: 20px; 
+  }
+
+  .register .form-group {
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-bottom: 20px; 
+  }
+
+  .register label {
+    margin-bottom: 5px; 
+    margin-right: 0; 
+  }
+
+ .register input{
+    width: 100%;
+  }
+
+  .register #firstname {
+    margin-right: 0; 
+    margin-bottom: 10px; 
+  }
+
+  .register button {
+    margin: 5px 0; 
+  }
+}
+
+/* CSS สำหรับไอแพด */
+
+@media only screen and (max-width: 950px) {
+  .register .register-form {
+    width: 85%; /* Adjusted width for better fit on iPad */
+    padding: 40px; /* Increased padding for better spacing */
+  }
+
+  .register .form-group {
+    margin-bottom: 20px; /* Reduced margin for better spacing */
+  }
+
+  .register label {
+    margin-bottom: 5px; /* Reduced margin for better spacing */
+    margin-right: 5; /* Reset margin-right for better alignment */
+  }
+
+  .register #firstname {
+    margin-right: 5; /* Reset margin-right for better alignment */
+    margin-bottom: 10px; /* Add margin-bottom for better spacing */
+  }
+
+  .register  input {
+    width: 100%; /* Make input fields take up the full width */
+    margin-bottom: 10px; /* Add margin-bottom for better spacing */
+  }
+
+  .register button {
+    margin: 20px 0; /* Adjusted margin for better spacing */
+  }
+}
+
+

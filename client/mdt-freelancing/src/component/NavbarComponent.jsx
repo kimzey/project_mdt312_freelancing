@@ -11,10 +11,10 @@ export default function Navbar() {
     <nav>
         <div class="menu">
             <div class="list">
-                <a href="#Home">Home</a>
+                <a href="/">Home</a>
                 <a href="#Profile">Profile</a>
                 <a href="#About">About</a>
-                <a href="#Login">Login</a>
+                <a href="/Login">Login</a>
             </div>
             <a href="#" id="btn-menu" onClick={add_show}>=</a>
         </div>
