@@ -109,31 +109,31 @@ button:active {
 
 @media only screen and (max-width: 950px) {
   .register .register-form {
-    width: 85%; /* Adjusted width for better fit on iPad */
-    padding: 40px; /* Increased padding for better spacing */
+    width: 85%; 
+    padding: 40px; 
   }
 
   .register .form-group {
-    margin-bottom: 20px; /* Reduced margin for better spacing */
+    margin-bottom: 20px; 
   }
 
   .register label {
-    margin-bottom: 5px; /* Reduced margin for better spacing */
-    margin-right: 5; /* Reset margin-right for better alignment */
+    margin-bottom: 5px; 
+    margin-right: 5; 
   }
 
   .register #firstname {
-    margin-right: 5; /* Reset margin-right for better alignment */
-    margin-bottom: 10px; /* Add margin-bottom for better spacing */
+    margin-right: 5; 
+    margin-bottom: 10px; 
   }
 
   .register  input {
-    width: 100%; /* Make input fields take up the full width */
-    margin-bottom: 10px; /* Add margin-bottom for better spacing */
+    width: 100%; 
+    margin-bottom: 10px; 
   }
 
   .register button {
-    margin: 20px 0; /* Adjusted margin for better spacing */
+    margin: 20px 0; 
   }
 }
 
