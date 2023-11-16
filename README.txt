@@ -21,6 +21,7 @@ package ที่ใช้ #ลงก่อน!!
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.0",
     "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
     "nodemon": "^3.0.1",
     "slugify": "^1.6.6",
     "uuid": "^9.0.1"

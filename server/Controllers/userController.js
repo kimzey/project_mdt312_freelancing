@@ -1,4 +1,7 @@
 const userDB = require("../models/user")
+const multer = require('multer');
+const {storage_img,imageFilterIMG} = require("../services/upload_img")
+const {storage_pdf,imageFilterPDF} = require("../services/upload_pdf")
 
 exports.create=(req,res)=>{
     console.log(req.body);
@@ -87,7 +90,6 @@ exports.remove = (req,res)=>{
 
 exports.update = (req,res)=>{
     const {username} = req.params
-
     const {name,email,tel,password,details,birhday,is_admin} = req.body
     // console.table({name,email,tel,username,password,details,birhday,is_admin});
     userDB.findOneAndUpdate({username},{name,email,tel,password,details,birhday,is_admin},{new:true})
@@ -99,4 +101,86 @@ exports.update = (req,res)=>{
         // console.log(err);
         res.status(400).json({error:"แก้ไขไม่สำเร็จ"})
     })
+}
+
+exports.searchUser = (req,res)=>{
+    const {input} =req.body
+    console.log(input);
+    userDB.find({"username": {$regex: '^' + input, $options: 'i'}})
+    .then((result)=>{
+        console.log(result);
+        res.json(result)
+    })
+    .catch((err)=>{
+        console.log(err);
+        res.status(400).json(err)
+    })
+} 
+
+exports.updateIMG = (req,res) =>{
+    let upload = multer({ storage: storage_img, fileFilter: imageFilterIMG }).single('profile_img');
+
+    const {username} = req.params
+    console.log(username);
+
+    upload(req, res, async (err) => {
+        if (req.fileValidationError) {
+            return res.send(req.fileValidationError);
+        }
+        else if (!req.file) {
+            return res.send('Please select an image to upload');
+        }
+        else if (err instanceof multer.MulterError) {
+            return res.send(err);
+        }
+        else if (err) {
+            return res.send(err);
+        }
+        console.log('You uploaded this image filename: '+ req.file.filename);
+
+        userDB.findOneAndUpdate({username},{"name_img":req.file.filename},{new:true})
+        .then((result)=>{
+            console.log(result);
+            res.json(result)
+        })
+        .catch((err)=>{
+            // console.log(err);
+            res.status(400).json(err)
+        })
+
+    });
+}
+
+exports.updatePDF = (req,res) =>{
+    let upload = multer({ storage: storage_pdf, fileFilter: imageFilterPDF }).single('profile_pdf');
+
+    const {username} = req.params
+    console.log(username);
+
+    upload(req, res, async (err) => {
+        if (req.fileValidationError) {
+            return res.send(req.fileValidationError);
+        }
+        else if (!req.file) {
+            return res.send('Please select an pdf to upload');
+        }
+        else if (err instanceof multer.MulterError) {
+            return res.send(err);
+        }
+        else if (err) {
+            return res.send(err);
+        }
+        console.log('You uploaded this pdf filename: '+ req.file.filename);
+        
+        userDB.findOneAndUpdate({username},{"name_pdf":req.file.filename},{new:true})
+        .then((result)=>{
+            console.log(result);
+            res.json(result)
+        })
+        .catch((err)=>{
+            // console.log(err);
+            res.status(400).json(err)
+        })
+
+    });
 }

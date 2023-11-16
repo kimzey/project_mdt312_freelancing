@@ -39,12 +39,16 @@ const userSchema = mongoose.Schema({
         },
         link_html:{
             type:String
-        },
-        name_pdf:{
-            type:String
         }
     },
     is_admin:{
+        type:String
+    },
+    name_img:{
+        type:String,
+        unique:true
+    },
+    name_pdf:{
         type:String
     }
 },{timestamps:true})
