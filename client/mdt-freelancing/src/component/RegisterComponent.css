@@ -1,23 +1,23 @@
 .register {
   background: linear-gradient(to right, #5c59c3, #9ad3cc);
-  height: 190vh;
+  height: 150%;
+  padding-top: 40px;
 }
 
 .register-form {
-  width: 1000px; 
-  margin: 40px auto;
+  width: 60%; 
+  margin: auto;
   padding: 40px; 
   border-radius: 15px;
   background-color: #ffffff;
   font-size: 20px;
 }
 
-h2 {
+.register h2 {
   color: #333;
 }
 
 .required-info {
-
   margin-bottom: 40px; 
 }
 
@@ -32,7 +32,7 @@ h2 {
 
 }
 
-label {
+.register label {
   font-size: 20px;
   margin-right: 15px;
 }
@@ -41,7 +41,7 @@ label {
   margin-right: 15px; 
 }
 
-input {
+.register input {
   flex-grow: 1; 
   padding: 10px; 
   border: 2px solid #ccc;
@@ -53,7 +53,7 @@ input {
   text-align: center;
 }
 
-button {
+.register button {
   background-color: #5c59c3;
   color: white;
   padding: 15px; 
@@ -65,11 +65,11 @@ button {
   transition: background-color 0.3s ease-out, transform 0.3s ease-out;
 }
 
-button:hover {
+.register button:hover {
   background-color: #807cf9;
 }
 
-button:active {
+.register button:active {
    scale:0.9;
 }
 

@@ -1,17 +1,15 @@
 #Login{
-  width: 1000px;
+  width: 60%;
   margin: 50px auto;
   padding: 40px;
   border-radius: 10px;
   background-color: #ffffff;
-  font-size: 20px;
-  height: 100%;
+  font-size: 30px;
 }
 
 .login {
   background: linear-gradient(to right, #5c59c3, #9ad3cc);
-  height: 100%;
-  overflow: hidden;
+  height: 150%;
 }
 
 #Login input[type="submit"] {
@@ -67,7 +65,7 @@
     width: 80%;
     margin: 20px auto;
     padding: 15px;
-    font-size: 18px;
+    font-size: 30px;
   }
 
   .login {
@@ -100,12 +98,11 @@
     width: 85%;
     margin: 50px auto;
     padding: 10px;
-    font-size: 18px;
+    font-size: 24px;
   }
 
 
   #Login input[type="submit"] {
-    margin-left: 4rem;
     font-size: 20px;
   }
 
