@@ -14,6 +14,7 @@ export default function Navbar() {
                 <Link to="#Profile">Profile</Link>
                 <Link to="#About">About</Link>
                 <Link to="/Login">Login</Link>
+                <Link to="/Register">Register</Link>
             </div>
             <Link to="#" id="btn-menu" onClick={add_show}>=</Link>
         </div>

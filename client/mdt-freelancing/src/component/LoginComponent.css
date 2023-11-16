@@ -1,8 +1,7 @@
-
-#Login {
-  width: 60vw;
+#Login{
+  width: 1000px;
   margin: 50px auto;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
   background-color: #ffffff;
   font-size: 20px;
@@ -24,11 +23,12 @@
   cursor: pointer;
   margin-left: auto;
   font-size: 25px;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+
 }
 
 #Login input[type="submit"]:hover {
   background-color: #807cf9;
-  transition: background-color 0.3s ease-out;
   text-align: center;
 }
 
@@ -103,9 +103,6 @@
     font-size: 18px;
   }
 
-  .login {
-
-  }
 
   #Login input[type="submit"] {
     margin-left: 4rem;

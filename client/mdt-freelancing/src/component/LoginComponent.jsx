@@ -3,9 +3,9 @@ import Navbar from "./NavbarComponent";
 
 export default function Login() {
   return (
-    <div className="login">
-      <Navbar></Navbar>
-
+    <div className ="login">
+    <Navbar></Navbar>
+    
       <form name="Login" id="Login">
         เข้าสู่ระบบ
         <br />
