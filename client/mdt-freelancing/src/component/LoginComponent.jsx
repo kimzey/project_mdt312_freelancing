@@ -74,7 +74,11 @@ export default function Login() {
         <br />
         <br /> <input type="checkbox" value={remember} onChange={(e)=>setValue(e,"remember")} /> จดจำฉัน <br />
         <br /> <input type="submit" value="เข้าสู่ระบบ" /> <br />
+<<<<<<< HEAD
         <br /> หรือยังไม่เคย <a href="/register">ลงทะเบียน</a> ? <br />
+=======
+        <br /> หรือยังไม่เคย <a href="/Register">ลงทะเบียน</a> ? <br />
+>>>>>>> 32bfd88307072f0c428f840f524751df2dacb298
       </form>
     </div>
   );

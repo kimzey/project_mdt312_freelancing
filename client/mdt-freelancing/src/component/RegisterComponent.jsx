@@ -75,7 +75,7 @@ export default function Register() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="firstname">ชื่อ - นามสกุล* </label>
+          <label htmlFor="firstname">ชื่อ - นามสกุล * </label>
           <input type="text" id="firstname" name="firstname" required value={name} onChange={(e)=>setValue(e,"name")}/>
 
         </div>

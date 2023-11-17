@@ -9,7 +9,7 @@
 
 .login {
   background: linear-gradient(to right, #5c59c3, #9ad3cc);
-  height: 150%;
+  height: 140%;
 }
 
 #Login input[type="submit"] {
@@ -71,7 +71,7 @@
   }
 
   .login {
-    height: 100%;
+    height: 120%;
   }
 
   #Login input[type="submit"] {
