@@ -32,6 +32,13 @@ exports.create=(req,res)=>{
         res.json(result)
     })
     .catch((err) => {
+
+        if(err["keyPattern"] === undefined){
+            res.status(400).json(err)
+        }
+
+        console.log(err["keyPattern"]);
+
         const error = Object.keys(err["keyPattern"]).pop()
         console.log(error);
         switch(true){
