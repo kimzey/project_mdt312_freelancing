@@ -45,34 +45,11 @@ const userSchema = mongoose.Schema({
         type:String
     },
     name_img:{
-        type:String,
-        unique:true
+        type:String
     },
     name_pdf:{
         type:String
     }
 },{timestamps:true})
 
-
-// const userdetail = mongoose.Schema({
-//     id:{
-//         type: mongoose.Schema.Types.ObjectId,
-//         ref: 'User'
-//     },
-//     ability:{
-//         type:String
-//     },
-//     education:{
-//         type:String
-//     },
-//     Workh_istory:{
-//         type:String
-//     },
-//     link_html:{
-//         type:String
-//     }
-// },{timestamps:true})
-
-// module.exports = mongoose.model("Userdetail",userdetail)
-
-module.exports = mongoose.model("User",userSchema)
+module.exports = mongoose.model("user",userSchema)

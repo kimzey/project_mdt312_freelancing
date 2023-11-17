@@ -72,7 +72,12 @@
 .register button:active {
    scale:0.9;
 }
-
+.register #errormsg{
+  color: red;
+}
+.register #errormsg:hover{
+  filter: drop-shadow(0 0 1rem red);
+}
 /* CSS สำหรับมือถือ */
 @media only screen and (max-width: 560px) {
   .register-form {

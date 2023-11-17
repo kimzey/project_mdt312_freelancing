@@ -6,6 +6,7 @@ const {storage_pdf,imageFilterPDF} = require("../services/upload_pdf")
 exports.create=(req,res)=>{
     console.log(req.body);
     const {name,email,tel,username,password,details,birhday,is_admin} = req.body
+    console.table({name,email,tel,username,password,details,birhday,is_admin});
 
     switch(true){
         case !name:
@@ -32,19 +33,19 @@ exports.create=(req,res)=>{
     })
     .catch((err) => {
         const error = Object.keys(err["keyPattern"]).pop()
-        // console.log(error);
+        console.log(error);
         switch(true){
-            case !email:
+            case error == "email":
                 return res.status(400).json({error:"Email ซ้ำโปรดกรอกอีกครั้ง"})
                 break
-            case !tel:
-                return res.status(400).json({error:"tel ซ้ำโปรดกรอกอีกครั้ง"})
+            case error ==  "tel":
+                return res.status(400).json({error:"เบอร์โทร ซ้ำโปรดกรอกอีกครั้ง"})
                 break
-            case !username:
+            case error ==  "username":
                 return res.status(400).json({error:"username ซ้ำโปรดกรอกอีกครั้ง"})
                 break
         }
-        res.json(err)
+        res.status(400).json(err)
     });
 }
 
