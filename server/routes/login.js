@@ -2,10 +2,11 @@
 const express = require("express")
 const router = express.Router()
 
-const {create,get_token,get_username,getall} = require("../Controllers/loginController")
+const {create,get_token,get_username,getall,login} = require("../Controllers/loginController")
 
 
 //router
+router.post('/login',login)
 router.post('/login/create',create)
 router.get('/login/getall',getall)
 router.get('/login/gettoken',get_token)

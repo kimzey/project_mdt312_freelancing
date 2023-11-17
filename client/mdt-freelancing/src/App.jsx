@@ -1,10 +1,19 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 import NotFound from "./component/NotFoundPage";
 import Home from "./component/HomeComponent";
 import Login from "./component/LoginComponent";
 import Register from "./component/RegisterComponent";
+import {logout,getRemember} from "../src/services/auth"
+import { useEffect } from "react";
+
 function App() {
+
+  useEffect(()=>{
+      if(getRemember() == false){
+        logout(()=>{});
+      }
+  },[])
 
   return (
     <BrowserRouter>
