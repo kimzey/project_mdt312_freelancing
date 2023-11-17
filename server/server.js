@@ -6,6 +6,8 @@ const cors = require("cors")
 
 //import route
 const userRoute = require("./routes/user")
+const postRoute = require("./routes/post")
+const loginRoute = require("./routes/login")
 
 //setup
 require("dotenv").config()
@@ -24,6 +26,8 @@ app.use(express.static('public'))
 
 //route
 app.use('/api',userRoute)
+app.use('/api',postRoute)
+app.use('/api',loginRoute)
 
 
 const port = process.env.PORT || 8080

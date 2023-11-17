@@ -10,6 +10,16 @@ exports.storage_img = multer.diskStorage({
     }
   });
 
+exports.storage_img_post = multer.diskStorage({
+  destination: (req, file, callback) => {
+    callback(null, 'public/post_img/');
+  },
+
+  filename: (req, file, cb) => {
+      cb(null, file.fieldname + '-' + Date.now() +'-'+ file.originalname);
+  }
+});
+
 exports.imageFilterIMG = (req, file, cb) => {
     if (!file.originalname.match(/\.(jpg|JPG|jpeg|JPEG|png|PNG|gif|GIF)$/)) {
         req.fileValidationError = 'Only image files are allowed!';

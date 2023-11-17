@@ -53,4 +53,26 @@ const userSchema = mongoose.Schema({
     }
 },{timestamps:true})
 
+
+// const userdetail = mongoose.Schema({
+//     id:{
+//         type: mongoose.Schema.Types.ObjectId,
+//         ref: 'User'
+//     },
+//     ability:{
+//         type:String
+//     },
+//     education:{
+//         type:String
+//     },
+//     Workh_istory:{
+//         type:String
+//     },
+//     link_html:{
+//         type:String
+//     }
+// },{timestamps:true})
+
+// module.exports = mongoose.model("Userdetail",userdetail)
+
 module.exports = mongoose.model("User",userSchema)
