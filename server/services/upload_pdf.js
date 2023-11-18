@@ -1,4 +1,5 @@
 const multer = require('multer');
+const path = require('path');
 
 exports.storage_pdf = multer.diskStorage({
     destination: (req, file, callback) => {
@@ -6,7 +7,7 @@ exports.storage_pdf = multer.diskStorage({
     },
 
     filename: (req, file, cb) => {
-        cb(null, file.fieldname + '-' + Date.now() +'-'+ file.originalname);
+        cb(null, file.fieldname + '-' + Date.now() +path.extname(file.originalname));
     }
   });
 

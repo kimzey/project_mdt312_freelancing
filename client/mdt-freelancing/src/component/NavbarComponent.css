@@ -67,7 +67,12 @@ nav #logo_serach{
 nav #logo_serach:active{
     scale: 0.8;
 }
-
+nav #profile_img{
+    max-height: 100%;
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 1rem;
+}
 nav .list a:hover{
     opacity: 0.8;
     padding: 0.5rem;
@@ -78,11 +83,12 @@ nav .list a:hover{
 nav .list a:active{
     scale: 0.9;
 } 
-
+nav #profile_img:active{
+    scale: 0.9;
+}
 nav .menu a:hover{
     filter: drop-shadow(0 0 2rem var(--primary-color));
 }
-
 body.show{
     transform: translateX( var(--menu_show));
 }
@@ -115,7 +121,10 @@ body.show{
         justify-content: space-around;
         align-items: center;
     }
-    
+    nav #profile_img{
+        max-width: 100% ;
+        padding: 1rem;
+    }
     nav #box_search{
         width: 40vw;
     }
@@ -155,10 +164,10 @@ body.show{
         text-align: center;
     }
     nav #box_search{
-        width: 80vw;
+        width: 100%;
     }
     nav #logo_web{
-        max-width: 60%;
+        max-width: 80%;
     }
     nav .menu #btn-menu{
         display: flex;

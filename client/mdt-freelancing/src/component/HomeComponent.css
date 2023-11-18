@@ -1,0 +1,43 @@
+.Home .Firstcontainer {
+    background: linear-gradient(to right, #5c59c3, #9ad3cc);
+    height: 40vh;
+  }
+  
+  .Home .text1 {
+    color: white;
+    font-size: 45px;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+    position: relative;
+    animation: pullDown 1s ease-out;
+    justify-content: center;
+    display: flex;
+  }
+  @keyframes pullDown {
+    from {
+      transform: translateY(-25%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .Home .Secondcontainer {
+      background-color: #9dc7c7;
+      height: 100vh;
+  }
+  
+  .Home .text2{
+      font-weight: bolder;
+      color: #5C59C3;
+      font-size: 30px;
+      padding: 3rem;
+  }
+  
+  .Home .rectangle {
+      width: 200px;
+      height: 100px;
+      background-color: rgb(95, 92, 100);
+      border: 2px solid navy;
+  }
