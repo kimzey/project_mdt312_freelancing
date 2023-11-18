@@ -118,7 +118,7 @@ export default function Register() {
           <label htmlFor="tel">
             หมายเลขโทรศัพท์ *{" "}
           </label>
-          <input type="tel" id="tel" name="tel" required maxlength="10" value={tel} onChange={(e)=>setValue(e,"tel")}/>
+          <input type="tel" id="tel" name="tel" required maxLength="10" value={tel} onChange={(e)=>setValue(e,"tel")}/>
         </div>
         <div id="errormsg"><h3>{state_error}</h3></div>
         <div className="form-button">

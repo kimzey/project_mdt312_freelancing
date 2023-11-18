@@ -41,6 +41,7 @@ exports.create=(req,res)=>{
 
         const error = Object.keys(err["keyPattern"]).pop()
         console.log(error);
+
         switch(true){
             case error == "email":
                 return res.status(400).json({error:"Email ซ้ำโปรดกรอกอีกครั้ง"})
