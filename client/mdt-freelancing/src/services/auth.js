@@ -1,14 +1,26 @@
 import axios from "axios"
+import Swal from "sweetalert2"
+
 export const authenticate = (res,next)=>{
     if(window !== "undefined"){
         const {token,username,remember} = res.data
         console.table({token,username,remember});
         axios.post(`http://localhost:5050/api/login/create`,{token,username})
-        localStorage.setItem("token",JSON.stringify(token))
-        localStorage.setItem("user",JSON.stringify(username))
-        localStorage.setItem("remember",JSON.stringify(remember))
+        .then(result=>{
+            localStorage.setItem("token",JSON.stringify(token))
+            localStorage.setItem("user",JSON.stringify(username))
+            localStorage.setItem("remember",JSON.stringify(remember))
+            next()
+        })
+        .catch(err=>{
+            console.log(err);
+            Swal.fire({
+                title: "แจ้งเตือน",
+                text: err.response.data.error,
+                icon: "error"
+              })
+            })
     }
-    next()
 }
 
 export const getToken=()=>{
@@ -44,11 +56,12 @@ export const getRemember=()=>{
     }
 }
 
-export const logout=(next)=>{
+export const logout=(user)=>{
     if(window !== "undefined"){
+        axios.post(`http://localhost:5050/api/logout/${user}`)
         localStorage.removeItem("token")
         localStorage.removeItem("user")
         localStorage.removeItem("remember")
+        window.location = "/login"
     }
-    next()
 }

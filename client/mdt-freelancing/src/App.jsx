@@ -4,14 +4,17 @@ import NotFound from "./component/NotFoundPage";
 import Home from "./component/HomeComponent";
 import Login from "./component/LoginComponent";
 import Register from "./component/RegisterComponent";
-import {logout,getRemember} from "../src/services/auth"
-import { useEffect } from "react";
+import {logout,getRemember,getUser} from "../src/services/auth"
+import { useEffect ,useState} from "react";
 
 function App() {
 
+  const [user,setUser] = useState(getUser())
+
   useEffect(()=>{
-      if(getRemember() == false){
-        logout(()=>{});
+      if(getRemember() == false && user != false){
+        console.log(user);
+        logout(user);
       }
   },[])
 

@@ -28,9 +28,9 @@ body{
     transition: all 0.2s ease;
 }
 
-html,body,#root{
+/* html,body,#root{
     height: 100%;
-  }
+  } */
 
 input{
     outline: 0;

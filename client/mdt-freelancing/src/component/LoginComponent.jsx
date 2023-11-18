@@ -11,7 +11,7 @@ export default function Login() {
   const [state,setstate] = useState({
       username:"",
       password:"",
-      remember:false
+      remember:true
     })
 
   const {username,password,remember} = state
@@ -29,7 +29,6 @@ export default function Login() {
     console.table({username,password,remember});
     axios.post(`http://localhost:5050/api/login`,{username,password,remember})
     .then(res=>{
-        console.log(res);
         authenticate(res,()=>navigate("/"))
     })
     .catch(err=>{
@@ -72,7 +71,7 @@ export default function Login() {
           required
         />
         <br />
-        <br /> <input type="checkbox" value={remember} onChange={(e)=>setValue(e,"remember")} /> จดจำฉัน <br />
+        <br /> <input type="checkbox" checked={remember} onChange={(e)=>setValue(e,"remember")} /> จดจำฉัน <br />
         <br /> <input type="submit" value="เข้าสู่ระบบ" /> <br />
         <br /> หรือยังไม่เคย <a href="/register">ลงทะเบียน</a> ? <br />
       </form>

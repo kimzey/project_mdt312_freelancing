@@ -5,11 +5,12 @@
   border-radius: 10px;
   background-color: #ffffff;
   font-size: 30px;
+  height: 100%;
 }
 
 .login {
   background: linear-gradient(to right, #5c59c3, #9ad3cc);
-  height: 140%;
+  padding-bottom: 1rem;
 }
 
 #Login input[type="submit"] {

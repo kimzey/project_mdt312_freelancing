@@ -46,8 +46,8 @@ exports.create=(req,res)=>{
         res.json(result)
     })
     .catch((err) => {
-        // console.log(error);
-        res.json(err)
+        console.log(err);
+        res.status(400).json({error:"login ซ้ำซ้อน"})
     });
 }
 
@@ -80,5 +80,23 @@ exports.get_username = (req,res)=>{
     .then((result)=>{
         // console.log(blog);
         res.json(result)
+    })
+}
+
+exports.logout = (req,res)=>{
+    const {username} = req.params
+    console.log(username);
+    loginDB.findOneAndDelete({username})
+    .then((result)=>{
+        if(!result){
+            res.json({message:"ไม่เจอ user"})      
+        }else{
+            res.json({message:"ลบ user เรียบร้อย"})      
+        }
+    })
+    .catch((err)=>{
+        if(!result){
+            res.json({message:"ไม่เจอ user"})}
+        res.json(err)
     })
 }
