@@ -39,16 +39,17 @@ const userSchema = mongoose.Schema({
         },
         link_html:{
             type:String
-        },
-        name_pdf:{
-            type:String
         }
     },
-    slug:{
-        type:String,
-        lowercase:true,
-        unique:true,
+    is_admin:{
+        type:String
+    },
+    name_img:{
+        type:String
+    },
+    name_pdf:{
+        type:String
     }
 },{timestamps:true})
 
-module.exports = mongoose.model("User",userSchema)
+module.exports = mongoose.model("user",userSchema)
