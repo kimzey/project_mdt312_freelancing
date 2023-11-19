@@ -1,43 +1,58 @@
 .Home .Firstcontainer {
-    background: linear-gradient(to right, #5c59c3, #9ad3cc);
-    height: 40vh;
+  background: linear-gradient(to right, #5c59c3, #9ad3cc);
+  height: 45vh;
+}
+
+.Home #logocontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pullDown 1s ease-out;
+}
+
+.Home #text1 {
+  color: white;
+  font-size: 45px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+  position: relative;
+  animation: pullDown 1s ease-out;
+  justify-content: center;
+  display: flex;
+}
+
+@keyframes pullDown {
+  from {
+    transform: translateY(-25%);
+    opacity: 0;
   }
-  
-  .Home .text1 {
-    color: white;
-    font-size: 45px;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
-    position: relative;
-    animation: pullDown 1s ease-out;
-    justify-content: center;
-    display: flex;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  @keyframes pullDown {
-    from {
-      transform: translateY(-25%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  .Home .Secondcontainer {
-      background-color: #9dc7c7;
-      height: 100vh;
-  }
-  
-  .Home .text2{
-      font-weight: bolder;
-      color: #5C59C3;
-      font-size: 30px;
-      padding: 3rem;
-  }
-  
-  .Home .rectangle {
-      width: 200px;
-      height: 100px;
-      background-color: rgb(95, 92, 100);
-      border: 2px solid navy;
-  }
+}
+
+.Home .Secondcontainer {
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+.Home #text2 {
+  font-weight: bolder;
+  color: #5c59c3;
+  font-size: 30px;
+  padding: 4rem;
+}
+
+.Home .square {
+  width: 250px;
+  height: 280px;
+  background-color: #d9d9d9;
+  border-radius: 35px;
+  text-align: center;
+  margin: 0 50px;
+  padding: 0;
+}
+.Home .squarecontainer {
+  display: flex;
+  justify-content: space-between;
+}
