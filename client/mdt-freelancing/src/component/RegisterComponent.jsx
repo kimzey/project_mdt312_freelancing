@@ -66,7 +66,6 @@ export default function Register() {
 
   return (
     <>
-    <Navbar></Navbar>
     <div className="register">
       <form className="register-form" name="myForm" id="myForm" onSubmit={submit_regis}>
         <h2>สมัครสมาชิก</h2>

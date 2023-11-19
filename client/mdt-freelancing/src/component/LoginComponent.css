@@ -1,6 +1,6 @@
 #Login{
   width: 60%;
-  margin: 50px auto;
+  margin: auto;
   padding: 40px;
   border-radius: 10px;
   background-color: #ffffff;
@@ -10,7 +10,7 @@
 
 .login {
   background: linear-gradient(to right, #5c59c3, #9ad3cc);
-  padding-bottom: 1rem;
+  padding: 1rem 0;
 }
 
 #Login input[type="submit"] {

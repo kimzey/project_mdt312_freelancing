@@ -5,8 +5,6 @@ import Navbar from "./NavbarComponent"
 export default function Home() {
   return (
     <div className="Home">
-      <Navbar />
-
       <div className="Firstcontainer">
         <h1 className="text1">
           <br />
