@@ -1,7 +1,7 @@
 .register {
   background: linear-gradient(to right, #5c59c3, #9ad3cc);
   height: 100%;
-  padding: 60px 0;
+  padding: 1rem 0;
 }
 
 .register-form {
@@ -113,11 +113,6 @@
 /* CSS สำหรับไอแพด */
 
 @media only screen and (max-width: 950px) {
-  .register{
-    height: 165vh;
-  }
-
-
   .register .register-form {
     width: 85%; 
     padding: 40px; 
@@ -146,5 +141,4 @@
     margin: 20px 0; 
   }
 }
-
 
