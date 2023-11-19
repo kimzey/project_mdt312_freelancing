@@ -6,6 +6,8 @@ import Login from "./component/LoginComponent";
 import Register from "./component/RegisterComponent";
 import {logout,getRemember,getUser} from "../src/services/auth"
 import { useEffect ,useState} from "react";
+import Navbar from "./component/NavbarComponent";
+
 
 function App() {
 
@@ -20,6 +22,7 @@ function App() {
 
   return (
     <BrowserRouter>
+    <Navbar></Navbar>
     <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="*" element={<NotFound/>}/>
