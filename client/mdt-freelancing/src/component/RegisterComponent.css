@@ -113,6 +113,11 @@
 /* CSS สำหรับไอแพด */
 
 @media only screen and (max-width: 950px) {
+  .register{
+    height: 165vh;
+  }
+
+
   .register .register-form {
     width: 85%; 
     padding: 40px; 
