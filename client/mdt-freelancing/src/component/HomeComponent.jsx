@@ -21,10 +21,10 @@ export default function Home() {
           งานที่แนะนำ
         </p>
 
-        <div id ="squarecontainer"> 
-        <p id="rectangle">...</p>
-        <p id="rectangle">...</p>
-        <p id="rectangle">...</p>       
+        <div class ="squarecontainer"> 
+        <p class="square">   </p>
+        <p class="square">   </p>
+        <p class="square">   </p>       
         </div>
 
 
