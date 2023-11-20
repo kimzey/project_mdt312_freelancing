@@ -42,6 +42,8 @@ export default function Login() {
   }
 
   return (
+    <>
+    <Navbar></Navbar>
     <div className ="login">
       <form name="Login" id="Login" onSubmit={submitlogin}>
         เข้าสู่ระบบ
@@ -75,5 +77,6 @@ export default function Login() {
         <br /> หรือยังไม่เคย <a href="/register">ลงทะเบียน</a> ? <br />
       </form>
     </div>
+    </>
   );
 }

@@ -6,8 +6,6 @@ import Login from "./component/LoginComponent";
 import Register from "./component/RegisterComponent";
 import {logout,getRemember,getUser} from "../src/services/auth"
 import { useEffect ,useState} from "react";
-import Navbar from "./component/NavbarComponent";
-
 
 function App() {
 
@@ -18,7 +16,7 @@ function App() {
         console.log(user);
         logout(user);
       }
-  },[])
+  })
 
   return (
     <BrowserRouter>
@@ -28,6 +26,8 @@ function App() {
         <Route path="*" element={<NotFound/>}/>
         <Route path="/Login" element={<Login />}/>
         <Route path="/Register" element={<Register/>}/>
+        <Route path="/posts/:tag" element={<PostComponent/>}/>
+        <Route path="/Profile/:tag" element={<ProfileComponent/>}/>
     </Routes> 
   </BrowserRouter>
   )
