@@ -3,7 +3,7 @@ import { useParams ,useNavigate } from "react-router-dom";
 import ReactQuill from "react-quill"
 import 'react-quill/dist/quill.snow.css';
 import Navbar from "./NavbarComponent";
-export default function PostCompornent() {
+export default function PostComponent() {
     const navigate = useNavigate();
     const param = useParams()
 
