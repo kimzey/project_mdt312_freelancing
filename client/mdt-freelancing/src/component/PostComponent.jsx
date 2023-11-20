@@ -1,9 +1,9 @@
-import "./PostCompornent.css"
+import "./PostComponent.css"
 import { useParams ,useNavigate } from "react-router-dom";
 import ReactQuill from "react-quill"
 import 'react-quill/dist/quill.snow.css';
 
-export default function PostCompornent() {
+export default function PostComponent() {
     const navigate = useNavigate();
     const param = useParams()
   return (<>
@@ -40,7 +40,7 @@ export default function PostCompornent() {
                     </div>
                     <div className="content">
                         <img></img>
-                        <p>loremaskasdkl;asdkl;adskl;asdkl;asdl;kadskl;adskl;asdkl;dsa;lkas;ldkl;askl;</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, ut maxime reiciendis repellat consectetur, corrupti expedita ad quod, doloribus animi eius nisi quidem aut! Modi voluptatibus error pariatur natus sit.</p>
                     </div>
                 </div>
 
