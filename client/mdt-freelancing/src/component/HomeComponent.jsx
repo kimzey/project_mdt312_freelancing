@@ -1,10 +1,12 @@
 import "./HomeComponent.css"
 import logo_img from "../assets/logo.png"
-
+import Navbar from "./NavbarComponent";
 
 
 export default function Home() {
   return (
+    <>
+    <Navbar></Navbar>
     <div className="Home">
       <div className="Firstcontainer">
         <h1 id="text1">
@@ -27,5 +29,6 @@ export default function Home() {
 
       </div>
     </div>
+    </>
   );
 }

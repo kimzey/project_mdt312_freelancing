@@ -72,7 +72,7 @@
   }
 
   .login {
-    height: 120%;
+    padding: 7rem 0;
   }
 
   #Login input[type="submit"] {

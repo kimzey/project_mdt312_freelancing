@@ -7,6 +7,7 @@ export const authenticate = (res,next)=>{
         console.table({token,username,remember});
         axios.post(`http://localhost:5050/api/login/create`,{token,username})
         .then(result=>{
+            console.log(result);
             localStorage.setItem("token",JSON.stringify(token))
             localStorage.setItem("user",JSON.stringify(username))
             localStorage.setItem("remember",JSON.stringify(remember))
@@ -57,11 +58,12 @@ export const getRemember=()=>{
 }
 
 export const logout=(user)=>{
+    console.log(user);
     if(window !== "undefined"){
         axios.post(`http://localhost:5050/api/logout/${user}`)
         localStorage.removeItem("token")
         localStorage.removeItem("user")
         localStorage.removeItem("remember")
-        window.location = "/login"
+        // window.location = "/login"
     }
 }

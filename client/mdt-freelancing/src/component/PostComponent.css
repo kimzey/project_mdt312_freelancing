@@ -13,7 +13,9 @@
     justify-content: center;
     align-items: center;
 }
-
+.post #title{
+    text-align: center;
+}
 .post #write_box{
     display: flex;
     flex-direction: column;
@@ -29,14 +31,17 @@
     width: 100%;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: start;
 }
 .post .box{
     width: 60vw;
+    height: auto;
     margin: 1rem;
     padding: 1rem;
     border-radius: 1rem;
     background-color: white;
+    word-wrap:break-word;
 }
 .post #write{
     width: 100%;
@@ -68,3 +73,30 @@ input[type="file"]::file-selector-button {
     border: 0;
     background-color: rgb(228, 146, 114);
   }
+.post #contnet_img{
+    max-width: 50%;
+    margin: auto;
+    display: block;
+    
+}
+.post .content{
+    word-wrap:break-word;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 950px) {
+
+    .post .box{
+        width: 80vw;
+    }
+
+}
+@media only screen and (max-width: 560px) {
+
+    .post .box{
+        width: 90vw;
+    }
+}
+
+
+

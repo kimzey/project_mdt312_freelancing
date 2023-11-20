@@ -2,7 +2,7 @@ import "./RegisterComponent.css";
 import { useState,useEffect } from "react";
 import axios from "axios"
 import Swal from "sweetalert2"
-
+import Navbar from "./NavbarComponent";
 export default function Register() {
   const [state_data,SetState_data] = useState({
     name:"",
@@ -65,6 +65,7 @@ export default function Register() {
 
   return (
     <>
+        <Navbar></Navbar>
     <div className="register">
       <form className="register-form" name="myForm" id="myForm" onSubmit={submit_regis}>
         <h2>สมัครสมาชิก</h2>

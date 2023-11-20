@@ -24,7 +24,7 @@ export default function Navbar() {
         .catch(err=>{
             alert(err)
         })
-    },[User])
+    },[])
 
     const add_show = ()=>{
         document.body.classList.toggle("show");
@@ -32,7 +32,7 @@ export default function Navbar() {
     
     const submit_search = () =>{
         console.log(User);
-        // navigate(`/posts/${input}`)
+        navigate(`/posts/${input}`)
     }
 
   return (
