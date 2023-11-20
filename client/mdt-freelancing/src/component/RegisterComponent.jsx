@@ -1,5 +1,4 @@
 import "./RegisterComponent.css";
-import Navbar from "./NavbarComponent";
 import { useState,useEffect } from "react";
 import axios from "axios"
 import Swal from "sweetalert2"

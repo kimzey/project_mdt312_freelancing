@@ -24,7 +24,7 @@ export default function Navbar() {
         .catch(err=>{
             alert(err)
         })
-    },[])
+    },[User])
 
     const add_show = ()=>{
         document.body.classList.toggle("show");
@@ -32,7 +32,7 @@ export default function Navbar() {
     
     const submit_search = () =>{
         console.log(User);
-        navigate(`/posts/${input}`)
+        // navigate(`/posts/${input}`)
     }
 
   return (
@@ -44,7 +44,7 @@ export default function Navbar() {
                 <img src={serach_img} id="logo_serach" onClick={submit_search} ></img>
             </div>
             <div className="list">
-
+            
                 {User && <>
                     <img src={`http://localhost:5050/img_user/${User.name_img||"avatar.png"}`} id="profile_img" onClick={()=>navigate(`/profile/${User.username}`)}></img>
                 </>}

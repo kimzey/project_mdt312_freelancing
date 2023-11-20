@@ -1,5 +1,4 @@
 import "./HomeComponent.css"
-import Navbar from "./NavbarComponent"
 import logo_img from "../assets/logo.png"
 
 
@@ -19,10 +18,10 @@ export default function Home() {
           งานที่แนะนำ
         </p>
 
-        <div class ="squarecontainer"> 
-        <p class="square">   </p>
-        <p class="square">   </p>
-        <p class="square">   </p>
+        <div className ="squarecontainer"> 
+        <p className="square">   </p>
+        <p className="square">   </p>
+        <p className="square">   </p>
         </div>
 
 
