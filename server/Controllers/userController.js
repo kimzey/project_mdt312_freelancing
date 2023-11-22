@@ -126,6 +126,7 @@ exports.searchUser = (req,res)=>{
 } 
 
 exports.updateIMG = (req,res) =>{
+    console.log(req.body);
     let upload = multer({ storage: storage_img, fileFilter: imageFilterIMG }).single('profile_img');
 
     const {username} = req.params

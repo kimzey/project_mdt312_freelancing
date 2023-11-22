@@ -27,6 +27,7 @@
 body{
     transition: all 0.2s ease;
     word-wrap:break-word;
+    padding-right: 0 !important;
 }
 
 /* html,body,#root{

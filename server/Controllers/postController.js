@@ -4,21 +4,13 @@ const multer = require('multer');
 const slugify = require("slugify")
 const {v4:uuidv4} = require('uuid')
 
-exports.create=(req,res)=>{
+exports.create= async (req,res) =>{
     console.log(req.body);
-    const {title,content,author,tag,img_post} = req.body
 
-    let slug = slugify(title)
-
-    if(!slug){
-        slug = uuidv4();
-        console.log(slug);
-    }
+    const {content,author,category} = req.body
+    let slug = uuidv4();
 
     switch(true){
-        case !title:
-            return res.status(400).json({error:"กรุณาป้อนหัวข้อ"})
-            break
         case !content:
             return res.status(400).json({error:"กรุณาป้อนเนื้อหา"})
             break
@@ -27,23 +19,26 @@ exports.create=(req,res)=>{
             break
     }
 
-    postDB.create({title,content,author,tag,slug,img_post})
+    postDB.create({content,author,category,slug})
     .then((result) => {
-        // console.log(result);
-        res.json(result)
+        console.log(result);
+        res.json({result,slug})
     })
     .catch((err) => {
-        // console.log(error);
+        console.log(err);
         res.json(err)
     });
 }
 
 exports.getAllpost = (req,res) =>{
-    const {tag} = req.params
-    postDB.find({tag})
+    const {category,number} = req.params
+    console.log((0+number)*10);
+
+    postDB.find({category}).sort({createdAt:-1}).skip((0+number)*10).limit(10)
     .then(result=>{
         console.log(result);
         res.json(result)
+        console.log((0+number)*10);
     })
     .catch(err=>{
         console.log(err);
@@ -117,9 +112,7 @@ exports.searchPost = (req,res)=>{
 
 exports.updateIMG = (req,res) =>{
     let upload = multer({ storage: storage_img_post, fileFilter: imageFilterIMG }).single('content_img');
-
     const {slug} = req.params
-    console.log(slug);
 
     upload(req, res, async (err) => {
         if (req.fileValidationError) {

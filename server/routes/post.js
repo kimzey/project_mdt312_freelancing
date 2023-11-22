@@ -7,7 +7,7 @@ const {create,getAllpost,getpost,remove,update,searchPost,updateIMG} = require("
 
 //router
 router.post('/post/create',create)
-router.get('/posts',getAllpost)
+router.get('/posts/:category/:number',getAllpost)
 router.get('/post/:slug',getpost)
 router.delete('/post/:slug',remove)
 router.put('/post/:slug',update)

@@ -27,7 +27,7 @@ function App() {
         <Route path="*" element={<NotFound/>}/>
         <Route path="/Login" element={<Login />}/>
         <Route path="/Register" element={<Register/>}/>
-        <Route path="/posts/:tag" element={<PostComponent/>}/>
+        <Route path="/posts/:category" element={<PostComponent/>}/>
         <Route path="/Profile/:tag" element={<ProfileComponent/>}/>
     </Routes> 
   </BrowserRouter>

@@ -3,6 +3,7 @@ const express = require("express")
 const mongoose = require("mongoose");
 const morgan = require("morgan")
 const cors = require("cors")
+// const fileUpload = require('express-fileupload');
 
 //import route
 const userRoute = require("./routes/user")
@@ -23,6 +24,7 @@ app.use(cors())
 app.use(morgan("dev"))
 app.use(express.json())
 app.use(express.static('public'))
+// app.use(fileUpload());
 
 //route
 app.use('/api',userRoute)

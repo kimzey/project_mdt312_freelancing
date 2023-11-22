@@ -15,34 +15,41 @@ export default function Navbar() {
     const [User,setUser] = useState()
 
     useEffect(()=>{
-        console.log(login_user);
-        if(login_user !== false && User == undefined)
-        axios.get(`http://localhost:5050/api/user/${login_user}`)
-        .then((response) => {
-            setUser(response.data)
-        })
-        .catch(err=>{
-            alert(err)
-        })
+        fetchuser()
     },[])
+
+    const fetchuser = async () =>{
+        if(login_user !== false && User == undefined){
+            axios.get(`http://localhost:5050/api/user/${login_user}`)
+            .then((response) => {
+                setUser(response.data)
+            })
+            .catch(err=>{
+                alert(err)
+            })
+        }
+    }
 
     const add_show = ()=>{
         document.body.classList.toggle("show");
     }
     
     const submit_search = () =>{
-        console.log(User);
         navigate(`/posts/${input}`)
     }
 
-    
+    const enter_search = (e) =>{
+        if (e.key === 'Enter') {
+            navigate(`/posts/${input}`)
+          }
+    }
 
   return (
     <nav>
         <div className="menu">
             <Link to="/" id="box_logo"><img src={logo_img} id="logo_web"></img></Link>
             <div id="box_search">
-                <input type="search" id="search_input"placeholder="ค้นหางาน..."value={input} onChange={(e)=>Setinput(e.target.value)} ></input>
+                <input type="search" id="search_input" value={input} onChange={(e)=>Setinput(e.target.value)} onKeyDown={enter_search} ></input>
                 <img src={serach_img} id="logo_serach" onClick={submit_search} ></img>
             </div>
             <div className="list">
