@@ -1,0 +1,98 @@
+.Profile{
+    background: linear-gradient(to right, #5c59c3, #9ad3cc);
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Profile .Profilecontainer{
+    width: 50vw;
+    height: 140vh;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: white;
+    text-align: center;
+}
+
+.Profile #displayPic img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block; 
+    margin: 0 auto; 
+    
+}
+
+.Profile #browsePic {
+    display: flex;
+    justify-content: center;
+    height: 15%; 
+}
+
+.Profile #displayPic {
+    max-width: 15%;
+}
+
+
+.Profile #text{
+    margin-bottom: 1rem; 
+}
+
+.Profile #Name {
+    margin-top: 35px;
+    margin-right: 33%; 
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+.Profile #Surname {
+    margin-top: 30px;
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+.Profile #Email{
+    margin-top: 45px;
+    margin-right: 42%; 
+    font-size: 25px;
+}
+
+.Profile #Username{
+    margin-top: 45px;
+    margin-right: 56%; 
+    font-size: 25px;
+}
+
+.Profile #Birthday{
+    margin-top: 45px;
+    margin-right: 50%;
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+.Profile #Age{
+    margin-top: 45px;
+    margin-right: 71%;
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+.Profile #Tel{
+    margin-top: 45px;
+    margin-right: 46%;
+    font-size: 25px;
+}
+
+.Profile #Exp1{
+    margin-top: 45px;
+}
+
+
+
+
+
+
