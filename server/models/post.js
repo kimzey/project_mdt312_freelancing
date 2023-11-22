@@ -1,19 +1,15 @@
 const mongoose = require("mongoose")
 
 const postSchema = mongoose.Schema({
-    title:{
-        type:String,
-        required:true
-    },
     content:{
-        type:{},
+        type:String,
         required:true
     },
     author:{
         type:String,
         default:"Admin"
     },
-    tag:{
+    category:{
         type:String,
         lowercase:true
     },

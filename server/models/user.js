@@ -34,15 +34,12 @@ const userSchema = mongoose.Schema({
         education:{
             type:String
         },
-        Workh_istory:{
+        Work_history:{
             type:String
         },
         link_html:{
             type:String
         }
-    },
-    is_admin:{
-        type:String
     },
     name_img:{
         type:String

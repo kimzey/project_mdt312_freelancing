@@ -16,14 +16,15 @@ export default function Navbar() {
 
     useEffect(()=>{
         console.log(login_user);
-        if(login_user !== false && User == undefined)
-        axios.get(`http://localhost:5050/api/user/${login_user}`)
-        .then((response) => {
-            setUser(response.data)
-        })
-        .catch(err=>{
-            alert(err)
-        })
+        if(login_user !== false && User == undefined){
+            axios.get(`http://localhost:5050/api/user/${login_user}`)
+            .then((response) => {
+                setUser(response.data)
+            })
+            .catch(err=>{
+                alert(err)
+            })
+        }
     },[])
 
     const add_show = ()=>{
