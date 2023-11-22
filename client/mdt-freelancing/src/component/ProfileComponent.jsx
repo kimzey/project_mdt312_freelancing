@@ -37,7 +37,7 @@ export default function ProfileComponent() {
             <p id="Email"> อีเมล : araa1365@gmail.com </p> 
             <p id="Username"> Username : flukee </p>
             <p id="Birthday"> วันเกิด : 14 ตุลาคม 2545 </p>
-            <p id="Age"> อายุ : 21 </p>   
+            <p id="Age"> อายุ : 21 ปี</p>   
             <p id="Tel"> เบอร์โทรศัพท์ :   0955711412    </p>
           </div>
 
@@ -45,8 +45,65 @@ export default function ProfileComponent() {
             <h1 id="Exp1"> ประสบการ์ณการทำงาน </h1>
 
             </div>
+        </div>
+
+
+        <div className="Profilecontainer2">
+          <h1 id="text2">Profile</h1>
+
+          <br/>
+          
+          <div id="browsePic2">
+            <div id="displayPic2" onClick={() => fileInputRef.current.click()}>
+              <img id ="pic2" src={`http://localhost:5050/img_user/${"avatar.png"}`}  
+              />
+            </div>
+
+            <form
+              action="/profilepic">
+              <input type="file" ref={fileInputRef}
+                style={{ display: "none" }}onChange={handleFileUpload}
+              />
+            </form>
+          </div>
+
+          <div className="about2">
+            <p id="Name2"> ชื่อ : ธนพล </p>              <p id="Surname2"> นามสกุล : วณิชย์นำเจริญ </p>   
+            <p id="Email2"> อีเมล : araa1365@gmail.com </p> 
+            <p id="Username2"> Username : flukee </p>
+            <p id="Birthday2"> วันเกิด : 14 ตุลาคม 2545 </p>
+            <p id="Age2"> อายุ : 21 ปี</p>   
+            <p id="Tel2"> เบอร์โทรศัพท์ :   0955711412    </p>
+          </div>
+
+          <div className="Exp2">  
+            <h1 id="Exp2"> ประสบการ์ณการทำงาน </h1>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div className="Portfoliocontainer">
+            <h1 id="text2"> Portfolio </h1>
+
+
 
         </div>
+
+
+
+
+
 
 
 

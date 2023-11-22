@@ -24,6 +24,7 @@ nav .menu .list {
     display: flex;
     align-items: center;
     justify-content:end;
+    
 }
 
 nav .list a{
@@ -33,6 +34,8 @@ nav .list a{
     padding: 0.5rem;
     border-radius: 1rem;
     margin-right: 1rem;
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+
 }
 
 nav .menu #btn-menu {
@@ -61,14 +64,18 @@ nav #search_input{
 nav #logo_web{
     max-width: 80%;
     max-height: 100% !important;
+    
 }
 nav #logo_serach{
     max-width: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+
 }
 nav #logo_serach:active{
     scale: 0.8;
 }
+
 nav #profile_img{
     max-height: 100%;
     border-radius: 50%;
@@ -80,7 +87,7 @@ nav .list a:hover{
     opacity: 0.8;
     padding: 0.5rem;
     color: var(--text-color);
-    background-color: var(--primary-color);
+    background-color: var(--primary-color);    
 } 
 
 nav .list a:active{
@@ -88,9 +95,11 @@ nav .list a:active{
 } 
 nav #profile_img:active{
     scale: 0.9;
+    
 }
 nav .list #profile_img:hover{
     filter: drop-shadow(0 0 1rem var(--primary-color));
+    
     
 }
 nav .menu a:hover{
