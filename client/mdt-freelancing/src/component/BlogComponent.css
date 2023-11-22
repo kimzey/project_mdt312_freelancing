@@ -1,0 +1,48 @@
+.box{
+    width: 60vw;
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: white;
+    word-wrap:break-word;
+}
+.box .text_content{
+    background-color: rgb(238, 238, 238);
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.box .By_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box .contnet_img{
+    max-width: 50%;
+    margin: auto;
+    display: block;
+}
+@media only screen and (max-width: 950px) {
+
+    .box{
+        width: 80vw;
+    }
+
+    .box .contnet_img{
+        max-width: 80%;
+    }
+}
+@media only screen and (max-width: 560px) {
+
+    .box{
+        width: 90vw;
+    }
+
+    .box .contnet_img{
+        max-width: 100%;
+    }
+}

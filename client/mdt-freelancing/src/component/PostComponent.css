@@ -1,7 +1,8 @@
 .post{
     background: linear-gradient(to right, #5c59c3, #9ad3cc);
+    min-height: 100vh;
     height: 100%;
-    padding: 4rem 0;
+    padding: 5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,15 +36,7 @@
     flex-wrap: wrap;
     justify-content: start;
 }
-.post .box{
-    width: 60vw;
-    height: auto;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: white;
-    word-wrap:break-word;
-}
+
 .post #write{
     width: 100%;
 }
@@ -53,14 +46,14 @@
     align-items: center;
     margin: 1rem 0;
 }
-.post .btn{
-    border: 0;
-}
 
 .post .btn_submit{
     padding: 1rem;
     border-radius: 1rem;
     background-color: rgb(52, 201, 52);
+}
+.post .btn{
+    border: 0;
 }
 .post .btn:hover{
     opacity: 0.8;
@@ -74,29 +67,39 @@ input[type="file"]::file-selector-button {
     border: 0;
     background-color: rgb(228, 146, 114);
   }
-.post #contnet_img{
-    max-width: 50%;
-    margin: auto;
-    display: block;
-    
-}
+
 .post .content{
     word-wrap:break-word;
     padding: 1rem;
 }
-
+.post .btn_page{
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.post .btn_pages{
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    width: auto;
+}
+.post .btn_pages:hover{
+    opacity: 0.9;
+}
+.post .btn_pages:active{
+    scale: 0.9;
+}
 @media only screen and (max-width: 950px) {
 
-    .post .box{
-        width: 80vw;
-    }
+
 
 }
 @media only screen and (max-width: 560px) {
 
-    .post .box{
-        width: 90vw;
-    }
+
 }
 
 
