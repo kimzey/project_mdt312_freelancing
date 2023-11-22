@@ -1,7 +1,7 @@
 import "./ProfileComponent.css"
 
-export default function PostCompornent() {
+export default function PostComponent() {
   return (<>
-        <h1>PostCompornent</h1>
+        <h1>PostComponent</h1>
   </>)
 }
