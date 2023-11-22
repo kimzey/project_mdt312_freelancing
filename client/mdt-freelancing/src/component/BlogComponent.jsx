@@ -8,25 +8,24 @@ export default function Blog(props){
     const {blog} = props
     const navigate = useNavigate();
 
-    const [author,setAuthor] = useState(blog.author)
+    const [author,setAuthor] = useState("")
     const [user,setUser] = useState({})
 
     const fetchuser = async () =>{
-            await axios.get(`http://localhost:5050/api/user/${author}`)
+            console.log(blog.author);
+            await axios.get(`http://localhost:5050/api/user/${blog.author}`)
             .then((response) => {
-                console.log(response.data);
+                // console.log(response.data);
                 setUser(response.data)
             })
             .catch(err=>{
                 console.log(err)
             })
     }
-
     useEffect(()=>{
         fetchuser()
     },[])
 
-    // console.log(blog);
     return(
         <>
                 <div id="post_box" className="box" >

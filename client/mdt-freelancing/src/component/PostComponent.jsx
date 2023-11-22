@@ -38,7 +38,7 @@ export default function PostCompornent() {
     const fetchblogs = async () =>{
             await axios.get(`http://localhost:5050/api/posts/${param.category}/${page_number}`)
             .then((response) => {
-                // console.log(response.data);
+                console.log(response.data);
                 setblogs(response.data)
             })
             .catch(err=>{
@@ -50,7 +50,6 @@ export default function PostCompornent() {
         fetchuser()
         setContent(null)
         fetchblogs()
-        console.log(blogs);
     },[page_number,param])
 
     const setWrite = (e)=>{
@@ -100,6 +99,9 @@ export default function PostCompornent() {
             setPage_number(page_number-1)
         }
     }
+    const add_pagenumber  = ()=>{
+        setPage_number(page_number+1)
+    }
   return (<>
         <Navbar></Navbar>
         <div className="post">
@@ -139,11 +141,11 @@ export default function PostCompornent() {
                 <div className="btn_page">
                     <button className="btn_pages" onClick={reduce_pagenumber}>Back</button>
                     <h1>{page_number+1}</h1>
-                    <button className="btn_pages" onClick={()=>setPage_number(page_number+1)}>Next</button>
+                    <button className="btn_pages" onClick={add_pagenumber}>Next</button>
                 </div>
                 {
-                    blogs.map((blog,index)=>(
-                        <Blog key={index} blog={blog}></Blog>
+                    blogs.map((blog)=>(
+                        <Blog key={blog._id} blog={blog}></Blog>
                     ))
                 }
             </div>
