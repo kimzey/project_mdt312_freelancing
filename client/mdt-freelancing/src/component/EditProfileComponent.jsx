@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "./ProfileComponent.css";
+import "./EditProfileComponent.css";
 import Navbar from "./NavbarComponent";
 import axios from "axios";
 import { useState ,useEffect} from "react";
@@ -144,7 +144,7 @@ export default function ProfileComponent() {
             <input type="password" id="Password_new" name="Password_new" value={password} onChange={(e)=>setpassword(e.target.value)} />
 
             {(Password_old!=User.password)&&(Password_old != "")
-            ?<p id="err">password ไม่เหมือนกัน</p>
+            ?<p id="err">* Password ไม่เหมือนกัน</p>
             :<></>}
 
           </div>

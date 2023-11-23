@@ -75,18 +75,24 @@ export default function ProfileComponent() {
             <p id="Age"> อายุ : {age} ปี</p>
             <p id="Tel"> เบอร์โทรศัพท์ : {User.tel} </p>
           </div>
-          <div className="Exp">
-              <h1>ability</h1>
-              {Parser().parse(User.ability)}
-          </div>
-          <div className="Exp">
-              <h1>education</h1>
-              {Parser().parse(User.education)}
-          </div>
-          <div className="Exp">
-              <h1>experience</h1>
-              {Parser().parse(User.experience)}
-          </div>
+          
+        <div className="info">
+            <div className="Exp1">
+                <h1>ability</h1>
+                {Parser().parse(User.ability)}
+            </div>
+            
+            <div className="Exp2">
+                <h1>education</h1>
+                {Parser().parse(User.education)}
+            </div>
+
+            <div className="Exp3">
+                <h1>experience</h1>
+                {Parser().parse(User.experience)}
+            </div>
+        </div>
+      
         </div>
 
 

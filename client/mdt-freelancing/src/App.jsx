@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
-import NotFound from "./component/NotFoundPage";
+// import NotFound from "./component/NotFoundPage";
 import Home from "./component/HomeComponent";
 import Login from "./component/LoginComponent";
 import Register from "./component/RegisterComponent";
@@ -9,6 +9,7 @@ import { useEffect ,useState} from "react";
 import PostComponent from "./component/PostComponent";
 import ProfileComponent from "./component/ProfileComponent.jsx"
 import EditProfileComponent from "./component/EditProfileComponent.jsx"
+import AboutComponent from "./component/AboutComponent.jsx"
 function App() {
 
   const [user,setUser] = useState(getUser())
@@ -24,7 +25,7 @@ function App() {
     <BrowserRouter >
     <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/About" element={<About/>}/>
+        <Route path="/About" element={<AboutComponent/>}/>
         <Route path="/Login" element={<Login />}/>
         <Route path="/Register" element={<Register/>}/>
         <Route path="/posts/:category" element={<PostComponent/>}/>
