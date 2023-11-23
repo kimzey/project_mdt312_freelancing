@@ -8,6 +8,7 @@ import {logout,getRemember,getUser} from "../src/services/auth"
 import { useEffect ,useState} from "react";
 import PostComponent from "./component/PostComponent";
 import ProfileComponent from "./component/ProfileComponent.jsx"
+import About from "./component/AboutComponent.jsx";
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
     <BrowserRouter >
     <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="*" element={<NotFound/>}/>
+        <Route path="/About" element={<About/>}/>
         <Route path="/Login" element={<Login />}/>
         <Route path="/Register" element={<Register/>}/>
         <Route path="/posts/:category" element={<PostComponent/>}/>
