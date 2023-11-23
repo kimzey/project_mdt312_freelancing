@@ -52,7 +52,7 @@ export default function Navbar() {
                 <input type="search" id="search_input" value={input} onChange={(e)=>Setinput(e.target.value)} onKeyDown={enter_search} ></input>
                 <img src={serach_img} id="logo_serach" onClick={submit_search} ></img>
             </div>
-            <div className="list">
+            <div className="list" onClick={add_show}>
             
                 {User && <>
                     <img src={`http://localhost:5050/img_user/${User.name_img||"avatar.png"}`} id="profile_img" onClick={()=>navigate(`/profile/${User.username}`)}></img>

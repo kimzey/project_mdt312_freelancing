@@ -23,11 +23,11 @@ export default function Home() {
       <div className="Secondcontainer">
         <p id="text2">งานที่แนะนำ</p>
 
-        <div class="squarecontainer">
-          <p class="square"> ... </p>
-          <p class="square"> ... </p>
-          <p class="square"> ... </p>
-          <p class="square"> ... </p>
+        <div className="squarecontainer">
+          <p className="square"> ... </p>
+          <p className="square"> ... </p>
+          <p className="square"> ... </p>
+          <p className="square"> ... </p>
         </div>
       </div>
 

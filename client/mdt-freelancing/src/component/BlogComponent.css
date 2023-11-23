@@ -26,6 +26,7 @@
     max-width: 50%;
     margin: auto;
     display: block;
+    border-radius: 1rem;
 }
 @media only screen and (max-width: 950px) {
 

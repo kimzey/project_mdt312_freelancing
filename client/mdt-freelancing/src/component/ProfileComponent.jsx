@@ -5,7 +5,9 @@ import Navbar from "./NavbarComponent";
 export default function ProfileComponent() {
   const fileInputRef = useRef(null);
 
-  const handleFileUpload = () => {    console.log("File uploaded");
+  const handleFileUpload = (e) => {    
+    console.log("File uploaded");
+    console.log(e.target.files[0]);
   };
 
   return (
@@ -24,12 +26,9 @@ export default function ProfileComponent() {
               />
             </div>
 
-            <form
-              action="/profilepic">
               <input type="file" ref={fileInputRef}
-                style={{ display: "none" }}onChange={handleFileUpload}
+                style={{ display: "none" }} onChange={handleFileUpload}
               />
-            </form>
           </div>
 
           <div className="about">

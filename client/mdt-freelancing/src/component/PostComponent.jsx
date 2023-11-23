@@ -38,19 +38,26 @@ export default function PostCompornent() {
     const fetchblogs = async () =>{
             await axios.get(`http://localhost:5050/api/posts/${param.category}/${page_number}`)
             .then((response) => {
-                console.log(response.data);
                 setblogs(response.data)
             })
             .catch(err=>{
                 console.log(err);
             })
     }
+    
+    useEffect(()=>{
+        fetchuser()
+        setContent(null)
+        fetchblogs()
+        window.scrollTo({top: 0, left: 0});
+    },[page_number])
 
     useEffect(()=>{
         fetchuser()
         setContent(null)
         fetchblogs()
-    },[page_number,param])
+        setPage_number(0)
+    },[param])
 
     const setWrite = (e)=>{
         setContent(e)
@@ -76,7 +83,6 @@ export default function PostCompornent() {
                 setContent(null);
             })
             .catch(err=>{
-                console.log(err)
                 Swal.fire({
                     title: "แจ้งเตือน",
                     text: err.response.data.error,
@@ -100,7 +106,9 @@ export default function PostCompornent() {
         }
     }
     const add_pagenumber  = ()=>{
-        setPage_number(page_number+1)
+        if(blogs.length > 0){
+            setPage_number(page_number+1)
+        }
     }
   return (<>
         <Navbar></Navbar>
@@ -141,13 +149,30 @@ export default function PostCompornent() {
                 <div className="btn_page">
                     <button className="btn_pages" onClick={reduce_pagenumber}>Back</button>
                     <h1>{page_number+1}</h1>
-                    <button className="btn_pages" onClick={add_pagenumber}>Next</button>
+                    <button className="btn_pages" onClick={add_pagenumber} >Next</button>
                 </div>
-                {
+
+                {blogs.length > 0 
+                ? (
                     blogs.map((blog)=>(
                         <Blog key={blog._id} blog={blog}></Blog>
                     ))
-                }
+                ) 
+                : <h1>ไม่พบบทความ</h1> }
+
+                {blogs.length >0 
+                ?(<div className="btn_page">
+                    <button className="btn_pages" onClick={reduce_pagenumber}>Back</button>
+                    <h1>{page_number+1}</h1>
+                    <button className="btn_pages" onClick={add_pagenumber}>Next</button>
+                </div>)
+                :<></>}
+
+                {/* {
+                    blogs.map((blog)=>(
+                        <Blog key={blog._id} blog={blog}></Blog>
+                    ))
+                } */}
             </div>
 
         </div>
