@@ -111,7 +111,7 @@ export default function ProfileComponent() {
           <div className="form-button" onClick={() => fileInputRef2.current.click()} >
            <button type="submit" >อัปโหลด Portfolio </button>
           </div>
-          <iframe src="../assets/logo.png" id="showport">  </iframe>
+          <iframe src="https://downloads.hindawi.com/journals/wcmc/2021/5573590.pdf?_gl=1*1jt85k2*_ga*MTMxMDY0Mjg4LjE2OTMzMTg1NzA.*_ga_NF5QFMJT5V*MTcwMDc0MzQ0My41LjAuMTcwMDc0MzQ0NC41OS4wLjA.&_ga=2.69195350.655204278.1700743444-131064288.1693318570" id="showport">  </iframe>
         </div>
       </div>
     </>

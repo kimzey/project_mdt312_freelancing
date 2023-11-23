@@ -237,13 +237,19 @@
  
 
   .Profile .Profilecontainer,
-  .Profile .Profilecontainer2,
-  .Profile .Portfoliocontainer {
+  .Profile .Profilecontainer2 {
     width: 80%;
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
     height: auto;
+  }
+
+  .Profile .Portfoliocontainer{
+    width: 78%;
+    
+    height: 25%;
+    margin-top: 20px;
   }
 
   .Profile #displayPic,
@@ -315,13 +321,20 @@
   }
 }
 
-/*แพด*/
+/*โทสับ*/
 @media only screen and (max-width: 560px) {
   .Profile .Profilecontainer,
-  .Profile .Profilecontainer2,
-  .Profile .Portfoliocontainer {
+  .Profile .Profilecontainer2
+   {
     width: 90vw;
     height: auto;
+    margin-top: 20px;
+  }
+
+  .Profile .Portfoliocontainer{
+    width: 90vw;
+    
+    height: 25%;
     margin-top: 20px;
   }
 
