@@ -28,10 +28,6 @@ export default function ProfileComponent() {
                 src={`http://localhost:5050/img_user/${"avatar.png"}`}
               />
             </div>
-
-              <input type="file" ref={fileInputRef}
-                style={{ display: "none" }} onChange={handleFileUpload}
-              />
           </div>
 
           <div className="about">
