@@ -49,7 +49,7 @@ export default function Navbar() {
         <div className="menu">
             <Link to="/" id="box_logo"><img src={logo_img} id="logo_web"></img></Link>
             <div id="box_search">
-                <input type="search" id="search_input" value={input} onChange={(e)=>Setinput(e.target.value)} onKeyDown={enter_search} ></input>
+                <input type="search" id="search_input" placeholder="ค้นหางาน..." value={input} onChange={(e)=>Setinput(e.target.value)} onKeyDown={enter_search} ></input>
                 <img src={serach_img} id="logo_serach" onClick={submit_search} ></img>
             </div>
             <div className="list" onClick={add_show}>

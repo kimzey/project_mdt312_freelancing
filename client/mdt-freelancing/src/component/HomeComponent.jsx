@@ -4,10 +4,9 @@ import logo_img from "../assets/logo.png";
 
 export default function Home() {
   return (
-    
+  <>
+   <Navbar></Navbar>
     <div className="Home">
-          <Navbar></Navbar>
-
       <div className="Firstcontainer">
         <h1 id="text1">
           <br />
@@ -39,5 +38,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   );
 }

@@ -38,7 +38,6 @@ exports.create=(req,res)=>{
         }
 
         console.log(err["keyPattern"]);
-
         const error = Object.keys(err["keyPattern"]).pop()
         console.log(error);
 
