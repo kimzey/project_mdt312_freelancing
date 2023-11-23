@@ -7,7 +7,8 @@ import {logout,getUser} from "../services/auth"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar(props) {
+
     const navigate = useNavigate();
 
     const [input,Setinput] = useState("")
@@ -15,19 +16,23 @@ export default function Navbar() {
     const [User,setUser] = useState()
 
     useEffect(()=>{
-        fetchuser()
+        if(login_user !== false && User == undefined){
+            fetchuser()
+        }
     },[])
 
+    useEffect(()=>{
+        fetchuser()
+    },[props])
+
     const fetchuser = async () =>{
-        if(login_user !== false && User == undefined){
-            axios.get(`http://localhost:5050/api/user/${login_user}`)
+            await axios.get(`http://localhost:5050/api/user/${login_user}`)
             .then((response) => {
                 setUser(response.data)
             })
             .catch(err=>{
                 alert(err)
             })
-        }
     }
 
     const add_show = ()=>{

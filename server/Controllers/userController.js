@@ -98,15 +98,15 @@ exports.remove = (req,res)=>{
 
 exports.update = (req,res)=>{
     const {username} = req.params
-    const {name,email,tel,password,details,birhday,is_admin} = req.body
+    const {name,password,ability,education,experience,link_html} = req.body
     // console.table({name,email,tel,username,password,details,birhday,is_admin});
-    userDB.findOneAndUpdate({username},{name,email,tel,password,details,birhday,is_admin},{new:true})
+    userDB.findOneAndUpdate({username},{name,password,ability,education,experience,link_html},{new:true})
     .then((result)=>{
         console.log(result);
         res.json(result)
     })
     .catch((err)=>{
-        // console.log(err);
+        console.log(err);
         res.status(400).json({error:"แก้ไขไม่สำเร็จ"})
     })
 }
@@ -161,7 +161,7 @@ exports.updateIMG = (req,res) =>{
 }
 
 exports.updatePDF = (req,res) =>{
-    let upload = multer({ storage: storage_pdf, fileFilter: imageFilterPDF }).single('profile_pdf');
+    let upload = multer({ storage: storage_pdf, fileFilter: imageFilterPDF }).single('name_pdf');
 
     const {username} = req.params
     console.log(username);

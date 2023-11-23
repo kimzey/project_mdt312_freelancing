@@ -12,8 +12,8 @@ router.get('/user/:username',getuser)
 router.delete('/user/:username',remove)
 router.put('/user/:username',update)
 router.post('/searchUser',searchUser)
-router.put('/updatimg/:username',updateIMG)
-router.put('/updatpdf/:username',updatePDF)
+router.put('/user/updatimg/:username',updateIMG)
+router.put('/user/updatpdf/:username',updatePDF)
 
 //export
 module.exports = router

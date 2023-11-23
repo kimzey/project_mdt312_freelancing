@@ -8,7 +8,7 @@ import {logout,getRemember,getUser} from "../src/services/auth"
 import { useEffect ,useState} from "react";
 import PostComponent from "./component/PostComponent";
 import ProfileComponent from "./component/ProfileComponent.jsx"
-
+import EditProfileComponent from "./component/EditProfileComponent.jsx"
 function App() {
 
   const [user,setUser] = useState(getUser())
@@ -29,6 +29,7 @@ function App() {
         <Route path="/Register" element={<Register/>}/>
         <Route path="/posts/:category" element={<PostComponent/>}/>
         <Route path="/Profile/:tag" element={<ProfileComponent/>}/>
+        <Route path="/Profile/edit/:tag" element={<EditProfileComponent/>}/>
     </Routes> 
   </BrowserRouter>
   )

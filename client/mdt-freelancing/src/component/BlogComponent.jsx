@@ -12,7 +12,7 @@ export default function Blog(props){
     const [user,setUser] = useState({})
 
     const fetchuser = async () =>{
-            console.log(blog.author);
+            // console.log(blog.author);
             await axios.get(`http://localhost:5050/api/user/${blog.author}`)
             .then((response) => {
                 // console.log(response.data);

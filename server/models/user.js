@@ -27,19 +27,17 @@ const userSchema = mongoose.Schema({
         type:String,
         required:true
     },
-    details:{
-        ability:{
-            type:String
-        },
-        education:{
-            type:String
-        },
-        Work_history:{
-            type:String
-        },
-        link_html:{
-            type:String
-        }
+    ability:{
+        type:String
+    },
+    education:{
+        type:String
+    },
+    experience:{
+        type:String
+    },
+    link_html:{
+        type:String
     },
     name_img:{
         type:String

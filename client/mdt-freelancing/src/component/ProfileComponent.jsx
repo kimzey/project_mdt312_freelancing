@@ -1,118 +1,112 @@
 import React, { useRef } from "react";
 import "./ProfileComponent.css";
 import Navbar from "./NavbarComponent";
-
-
-
+import { useState ,useEffect} from "react";
+import {getUser} from "../services/auth"
+import axios from "axios";
+import { Parser } from 'html-to-react'
+import { useNavigate,useParams } from "react-router-dom";
 
 export default function ProfileComponent() {
+  const navigate = useNavigate();
 
-  const fileImageRef = useRef(null);
+  const [User,setUser] = useState("")
+  const [login_user,Setlogin_user] = useState(useParams().tag)
+  const [age,setAge] = useState(0)
 
-  const Fileimageupload = () => {
-    console.log("File uploaded");
-  };
+  useEffect(()=>{
+      fetchuser()
+      getAge()
+  },[])
+
+  const fetchuser = async () =>{
+    console.log(login_user);
+      if(login_user !== false && User == ""){
+          await axios.get(`http://localhost:5050/api/user/${login_user}`)
+          .then((response) => {
+              console.log(response.data);
+              setUser(response.data)
+              getAge(response.data.birhday)
+          })
+          .catch(err=>{
+              alert(err)
+          })
+      }
+  }
+
+  const getAge = (birhday)=>{
+    const time = new Date(birhday)
+    const timex = new Date()
+    const cal_age = timex - time
+  
+    const millisecondsPerYear = 31536000000; // 1 ปีมีประมาณ 31536000000 มิลลิวินาที
+    const ageYears = Math.floor(cal_age / millisecondsPerYear);
+    setAge(ageYears)
+  }
+
 
   return (
     <>
       <Navbar></Navbar>
       <div className="Profile">
+
         <div className="Profilecontainer">
+
+          {User && (
+            <div id="Edit_profile">
+                  <button id="btn_edit" onClick={()=>navigate("/profile/edit/kimzey1")}>Edit</button>
+            </div>
+          )}
+
           <h1 id="text">Profile</h1>
 
           <br />
 
           <div id="browsePic">
             <div id="displayPic">
-              <img
-                id="pic"
-                src={`http://localhost:5050/img_user/${"avatar.png"}`}
-              />
+              <img src={`http://localhost:5050/img_user/${User.name_img||"avatar.png"}`} id="profile_img" ></img>
             </div>
           </div>
 
           <div className="about">
-            <p id="Name"> ชื่อ : ธนพล </p>{" "}
-            <p id="Surname"> นามสกุล : วณิชย์นำเจริญ </p>
-            <p id="Email"> อีเมล : araa1365@gmail.com </p>
-            <p id="Username"> Username : flukee </p>
-            <p id="Birthday"> วันเกิด : 14 ตุลาคม 2545 </p>
-            <p id="Age"> อายุ : 21 ปี</p>
-            <p id="Tel"> เบอร์โทรศัพท์ : 0955711412 </p>
+            <p id="Name"> ชื่อ : {User.name} </p>{" "}
+            <p id="Email"> อีเมล : {User.email} </p>
+            <p id="Username"> Username : {User.username} </p>
+            <p id="Birthday"> วันเกิด : {new Date(User.birhday).toLocaleDateString()} </p>
+            <p id="Age"> อายุ : {age} ปี</p>
+            <p id="Tel"> เบอร์โทรศัพท์ : {User.tel} </p>
           </div>
-
           <div className="Exp">
-            <h1 id="Exp1"> ประสบการณ์การทำงาน </h1>
-            <p id="Exp2"> 2557-2558 โปรแกรมเมอร์ ที่ ********* </p>
-            <p id="Exp3"> 2558-2562 ไอที ซัพพอร์ต ที่ ********* </p>
-            <p id="Exp4"> 2563-2566 fullstack developer ที่ ********* </p>
+              <h1>ability</h1>
+              {Parser().parse(User.ability)}
+          </div>
+          <div className="Exp">
+              <h1>education</h1>
+              {Parser().parse(User.education)}
+          </div>
+          <div className="Exp">
+              <h1>experience</h1>
+              {Parser().parse(User.experience)}
           </div>
         </div>
 
-        <div className="Profilecontainer2">
-          <h1 id="text2">แก้ไข Profile</h1>
 
-          <br />
-
-          <div id="browsePic2">
-            <div id="displayPic2" onClick={() => fileImageRef.current.click()}>
-              <img
-                id="pic2"
-                src={`http://localhost:5050/img_user/${"avatar.png"}`}
-              />
-            </div>
-
-            <form action="/profilepic">
-              <input
-                type="file"
-                ref={fileImageRef}
-                style={{ display: "none" }}
-                onChange={Fileimageupload}
-              />
-            </form>
+       {User.link_html && (
+          <div className="Portfoliocontainer">
+            <h1 id="text2"> MY WEB </h1>
+            <iframe src={User.link_html} id="showport">  </iframe>
           </div>
+       )}
 
-          <div className="about2">
-            <label htmlFor="Name2">ชื่อ :</label>
-            <input type="text" id="Name2" name="Name2" />
-
-            <label htmlFor="Surname2">นามสกุล :</label>
-            <input type="text" id="Surname2" name="Surname2" />
-
-            <label htmlFor="Birthday2">วันเกิด :</label>
-            <input type="date" id="Birthday2" name="Birthday2" />
-
-            <label htmlFor="Password2">รหัสผ่านเดิม :</label>
-            <input type="password" id="Password2" name="Password2" />
-
-            <label htmlFor="Password2">เปลี่ยนรหัสผ่าน :</label>
-            <input type="password" id="Password2" name="Password2" />
-
-            <label htmlFor="Age2">อายุ :</label>
-            <input type="text" id="Age2" name="Age2" />
+       {User.name_pdf && (
+          <div className="Portfoliocontainer">
+            <h1 id="text2"> Portfolio </h1>
+            <iframe src={`http://localhost:5050/pdf_user/${User.name_pdf}`} id="showport">  </iframe>
           </div>
+       )}
 
-          <div className="Exp2">
-            <h1 id="Exp2"> ประสบการณ์การทำงาน </h1>
-            <label htmlFor="Expinput"> </label>
-            <textarea id="Expinput" name="Expinput"></textarea>
-          </div>
 
-          <div className="form-button">
-           <button type="submit" >แก้ไขข้อมูล </button>
-          </div>
-        </div>
 
-       
-        <div className="Portfoliocontainer">
-          <h1 id="text2"> Portfolio </h1>
-
-          
-          <div className="form-button" onClick={() => fileInputRef2.current.click()} >
-           <button type="submit" >อัปโหลด Portfolio </button>
-          </div>
-          <iframe src="../assets/logo.png" id="showport">  </iframe>
-        </div>
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 .Profile {
   background: linear-gradient(to right, #5c59c3, #9ad3cc);
-  height: 495vh;
-  padding-top: 15px;
+  height: 100%;
+  padding: 4rem;
 }
 
 .Profile .Profilecontainer {
@@ -105,7 +105,6 @@
   border-radius: 20px;
   padding: 20px;
   width: 50vw;
-  height: 190vh;
   margin: 30px auto 0;
 }
 
@@ -230,7 +229,16 @@
   width: 100%;
    
   }
-
+.Profile #Edit_profile{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.Profile #btn_edit{
+  margin: 0;
+  padding: 1rem 2rem;
+}
 
 /* CSS สำหรับไอแพด */
 @media only screen and (max-width: 950px) {
