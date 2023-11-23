@@ -31,7 +31,7 @@ export default function Navbar() {
     }
 
     const add_show = ()=>{
-        document.body.classList = ("show");
+        document.body.classList.toggle("show");
     }
     const remove_show = ()=>{
         document.body.classList = ("");
