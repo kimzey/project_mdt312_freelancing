@@ -105,6 +105,11 @@ export default function ProfileComponent() {
        
         <div className="Portfoliocontainer">
           <h1 id="text2"> Portfolio </h1>
+
+          
+          <div className="form-button">
+           <button type="submit" >แก้ไขข้อมูล </button>
+          </div>
           <iframe id="showport"> </iframe>
         </div>
       </div>
