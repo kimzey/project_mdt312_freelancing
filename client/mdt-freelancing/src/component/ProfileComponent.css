@@ -225,13 +225,17 @@
   margin: 30px auto 0;
 }
 
-
-
-
+.Profile #showport{
+  height: 100%;
+  width: 100%;
+   
+  }
 
 
 /* CSS สำหรับไอแพด */
 @media only screen and (max-width: 950px) {
+ 
+
   .Profile .Profilecontainer,
   .Profile .Profilecontainer2,
   .Profile .Portfoliocontainer {
@@ -311,6 +315,7 @@
   }
 }
 
+/*แพด*/
 @media only screen and (max-width: 560px) {
   .Profile .Profilecontainer,
   .Profile .Profilecontainer2,

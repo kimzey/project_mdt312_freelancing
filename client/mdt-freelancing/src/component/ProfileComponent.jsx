@@ -6,9 +6,10 @@ import Navbar from "./NavbarComponent";
 
 
 export default function ProfileComponent() {
-  const fileInputRef2 = useRef(null);
 
-  const handleFileUpload2 = () => {
+  const fileImageRef = useRef(null);
+
+  const Fileimageupload = () => {
     console.log("File uploaded");
   };
 
@@ -54,7 +55,7 @@ export default function ProfileComponent() {
           <br />
 
           <div id="browsePic2">
-            <div id="displayPic2" onClick={() => fileInputRef2.current.click()}>
+            <div id="displayPic2" onClick={() => fileImageRef.current.click()}>
               <img
                 id="pic2"
                 src={`http://localhost:5050/img_user/${"avatar.png"}`}
@@ -64,9 +65,9 @@ export default function ProfileComponent() {
             <form action="/profilepic">
               <input
                 type="file"
-                ref={fileInputRef2}
+                ref={fileImageRef}
                 style={{ display: "none" }}
-                onChange={handleFileUpload2}
+                onChange={Fileimageupload}
               />
             </form>
           </div>
@@ -107,10 +108,10 @@ export default function ProfileComponent() {
           <h1 id="text2"> Portfolio </h1>
 
           
-          <div className="form-button">
-           <button type="submit" >แก้ไขข้อมูล </button>
+          <div className="form-button" onClick={() => fileInputRef2.current.click()} >
+           <button type="submit" >อัปโหลด Portfolio </button>
           </div>
-          <iframe id="showport"> </iframe>
+          <iframe src="../assets/logo.png" id="showport">  </iframe>
         </div>
       </div>
     </>
