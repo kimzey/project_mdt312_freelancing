@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import "./ProfileComponent.css";
 import Navbar from "./NavbarComponent";
 import { useState ,useEffect} from "react";
-import {getUser} from "../services/auth"
 import axios from "axios";
 import { Parser } from 'html-to-react'
 import { useNavigate,useParams } from "react-router-dom";

@@ -24,7 +24,7 @@ function App() {
     <BrowserRouter >
     <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="*" element={<NotFound/>}/>
+        <Route path="/About" element={<About/>}/>
         <Route path="/Login" element={<Login />}/>
         <Route path="/Register" element={<Register/>}/>
         <Route path="/posts/:category" element={<PostComponent/>}/>
