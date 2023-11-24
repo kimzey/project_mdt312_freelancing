@@ -3,9 +3,10 @@ import Navbar from "./NavbarComponent";
 import logo_img from "../assets/logo.png";
 import { useState ,useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
-  
+  const navigate = useNavigate();
   const [category,setCategory] = useState([])
 
   useEffect(()=>{
@@ -46,7 +47,7 @@ export default function Home() {
         <div className="squarecontainer">
 
           {category.map((blog)=>(
-            <div className="square" key={blog._id}>
+            <div className="square" key={blog._id} onClick={()=>navigate(`/posts/${blog._id}`)}>
               <p>งาน : {blog._id}</p> 
               <p>จำนวน : {blog.total} ครั้ง</p></div>
           ))}
