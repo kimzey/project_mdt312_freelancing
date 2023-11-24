@@ -48,8 +48,9 @@ export default function Home() {
 
           {category.map((blog)=>(
             <div className="square" key={blog._id} onClick={()=>navigate(`/posts/${blog._id}`)}>
-              <p>งาน : {blog._id}</p> 
-              <p>จำนวน : {blog.total} ครั้ง</p></div>
+              <p className="text_job">งาน : {blog._id}</p> 
+              <p className="text_job">จำนวน : {blog.total} ครั้ง</p> 
+            </div>
           ))}
 
         </div>

@@ -136,7 +136,10 @@ export default function EditProfile() {
 
             <label >เปลี่ยนรหัสผ่าน :</label>
             <input type="password" id="Password_S" name="Password_new" value={password} onChange={(e)=>setpassword(e.target.value)} />
-
+            <label >Link Portfolio :</label>
+            <input type="text" className="Linkhtml"  value={link_html}
+             onChange={(e)=>setlink_html(e.target.value)}>
+             </input>
 
           </div>
 
@@ -146,6 +149,7 @@ export default function EditProfile() {
                 placeholder="เขียนความสามารถ"
                 value={ability}
                 onChange={setability}
+                className="text_exp"
                 />
           </div>
 
@@ -155,6 +159,7 @@ export default function EditProfile() {
                 placeholder="เขียนประสบการณ์การทำงาน"
                 value={experience}
                 onChange={setexperience}
+                className="text_exp"
                 />
           </div>
 
@@ -164,18 +169,12 @@ export default function EditProfile() {
                 placeholder="เขียนรายประวัติการศึกษา"
                 value={education}
                 onChange={seteducation}
+                className="text_exp"
                 />
           </div>
 
-          <div className="Exp2Link">
-            <h1 id="Exp2"> Link Portfolio </h1>
-            <input type="text" className="Linkhtml"  value={link_html}
-             onChange={(e)=>setlink_html(e.target.value)}>
-             </input>
-          </div>
-
           <div className="form-button1" >
-            <input type="file" onChange={set_pdf}></input>
+            <input type="file" onChange={set_pdf} id="btn_pdf"></input>
           </div>
 
           <div className="form-button">

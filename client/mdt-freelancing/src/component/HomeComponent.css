@@ -52,6 +52,7 @@
 }
 
 .Home .square {
+  cursor: pointer;
   width: 20%;
   background-color: #57576d; 
   border-radius: 15px; 
@@ -92,7 +93,9 @@
   margin-bottom: 25px; 
 }
 
-
+.Home .text_job{
+  font-size: 24px;
+}
 
 
 
@@ -178,11 +181,13 @@
      font-size: 24px;
      padding-bottom: 5px;
    }
- 
    .thridcontainer p {
      margin: 5px 0;
    }
    .Home .square {
      width: 100%;
    }
+   .Home #logo_webb{
+    max-width: 80%;
+  }
  }

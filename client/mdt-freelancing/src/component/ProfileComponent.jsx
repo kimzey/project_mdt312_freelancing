@@ -58,8 +58,6 @@ export default function ProfileComponent() {
 
           <h1 id="text">Profile</h1>
 
-          <br />
-
           <div id="browsePic">
             <div id="displayPic">
               <img src={`http://localhost:5050/img_user/${User.name_img||"avatar.png"}`} id="profile_img" ></img>
@@ -67,28 +65,25 @@ export default function ProfileComponent() {
           </div>
 
           <div className="about">
-            <p id="Name"> ชื่อ : {User.name} </p>{" "}
-            <p id="Email"> อีเมล : {User.email} </p>
-            <p id="Username"> Username : {User.username} </p>
-            <p id="Birthday"> วันเกิด : {new Date(User.birhday).toLocaleDateString()} </p>
-            <p id="Age"> อายุ : {age} ปี</p>
-            <p id="Tel"> เบอร์โทรศัพท์ : {User.tel} </p>
+            <h1 className="subtext" id="Name"> ชื่อ : {User.name} </h1>{" "}
+            <h1 className="subtext" id="Email"> อีเมล : {User.email} </h1>
+            <h1 className="subtext" id="Username"> Username : {User.username} </h1>
+            <h1 className="subtext" id="Birthday"> วันเกิด : {new Date(User.birhday).toLocaleDateString()} </h1>
+            <h1 className="subtext" id="Age"> อายุ : {age} ปี</h1>
+            <h1 className="subtext" id="Tel"> เบอร์โทรศัพท์ : {User.tel} </h1>
           </div>
           
         <div className="info">
-
-            <div className="Exp1">
-                <h1>Ability</h1>
+            <h1>Ability</h1>
+            <div className="Exp">
                 {Parser().parse(User.ability)}
             </div>
-            
-            <div className="Exp2">
-                <h1>Experience</h1>
+            <h1>Experience</h1>
+            <div className="Exp">
                 {Parser().parse(User.experience)}
             </div>
-
-            <div className="Exp3">
-                <h1>Education</h1>
+            <h1>Education</h1>
+            <div className="Exp">
                 {Parser().parse(User.education)}
             </div>
         </div>
@@ -97,15 +92,15 @@ export default function ProfileComponent() {
 
 
        {User.link_html && (
-          <div className="Portfoliocontainer">
-            <h1 id="text2"> My Web </h1>
+          <div className="Profilecontainer">
+            <h1 id="text"> My Web </h1>
             <iframe src={User.link_html} id="showport">  </iframe>
           </div>
        )}
 
        {User.name_pdf && (
-          <div className="Portfoliocontainer">
-            <h1 id="text2"> Portfolio </h1>
+          <div className="Profilecontainer">
+            <h1 id="text"> Portfolio </h1>
             <iframe src={`http://localhost:5050/pdf_user/${User.name_pdf}`} id="showport">  </iframe>
           </div>
        )}

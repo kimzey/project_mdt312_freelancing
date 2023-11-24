@@ -61,12 +61,6 @@
 .post .btn:active{
     scale: 0.9;
 }
-input[type="file"]::file-selector-button {
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 0;
-    background-color: rgb(228, 146, 114);
-  }
 
 .post .content{
     word-wrap:break-word;

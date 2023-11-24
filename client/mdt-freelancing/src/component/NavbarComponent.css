@@ -138,7 +138,7 @@ body.show{
         align-items: center;
     }
     nav #profile_img{
-        max-width: 60%;
+        max-width: 80%;
         border: 0;
         padding: 1rem;
     }
@@ -184,7 +184,7 @@ body.show{
         width: 100%;
     }
     nav #logo_web{
-        max-width: 80%;
+        max-width: 80% !important;
     }
     nav .menu #btn-menu{
         display: flex;
@@ -211,6 +211,6 @@ body.show{
         transform: translateX(0);
     }
     nav #profile_img{
-        max-width: 30%;
+        max-width: 50%;
     }
 }

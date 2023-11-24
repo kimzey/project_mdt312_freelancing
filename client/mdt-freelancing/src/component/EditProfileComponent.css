@@ -8,11 +8,12 @@
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   padding: 20px;
-  width: 50vw;
+  width: 60vw;
   margin: 10px auto 0;
 }
 
 .EditProfile #text2 {
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -25,7 +26,7 @@
 
 .EditProfile #displayPic2 {
   cursor: pointer;
-  max-width: 150px;
+  max-width: 80%;
   margin-bottom: 10px;
   border: 2px solid #3498db;
   border-radius: 50%;
@@ -150,26 +151,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 1rem;
 }
 
-.EditProfile .form-button1 input {
+.EditProfile #btn_pdf{
+  border: 0;
   border-radius: 20px;
 }
+.EditProfile #btn_pdf:hover{
+  opacity: 0.9;
+}
+.EditProfile #btn_pdf:active{
+  scale: 0.9;
+}
+
 
 /* CSS สำหรับไอแพด */
 @media only screen and (max-width: 950px) {
-  .EditProfile .Profilecontainer2 {
-    width: 80%;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    height: auto;
+  .EditProfile {
+    padding: 2rem;
+  }
+  .EditProfile .EditprofilePcontainer{
+    width: 90%;
   }
 
   .EditProfile #displayPic2 {
-    max-width: 120px;
+    max-width: 80%;
     margin-bottom: 10px;
     border-radius: 50%;
     overflow: hidden;
@@ -198,25 +205,34 @@
     margin: 10px 0;
     font-size: 1.3rem;
   }
+  .text_exp p{
+    font-size: 20px;
+  }
+  .EditProfile #text2 {
+    font-size: 2rem;
+  }
+  
 }
 
 /* โทสับ */
 @media only screen and (max-width: 560px) {
-  .EditProfile .Profilecontainer2 {
-    width: 80%;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    height: auto;
+  .EditProfile {
+    padding: 1rem;
+  }
+  .EditProfile .EditprofilePcontainer{
+    width: 90%;
   }
 
   .EditProfile #displayPic2 {
-    max-width: 100px;
+    max-width: 80%;
     margin-bottom: 10px;
   }
 
   .EditProfile .about2 input,
   .EditProfile .about2 select {
     width: 100%;
+  }
+  .text_exp p{
+    font-size: 20px;
   }
 }
