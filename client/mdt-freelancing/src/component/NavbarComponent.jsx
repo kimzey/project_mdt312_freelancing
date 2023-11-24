@@ -41,13 +41,17 @@ export default function Navbar(props) {
     const remove_show = ()=>{
         document.body.classList = ("");
     }
-    
+        
     const submit_search = () =>{
         const category = input
-        const username = User.username
 
         if(category != null && category != " " && category != []){
             console.log("test");
+            console.log(User);
+            const username = "guest"
+            if(User){
+                username = User.username
+            }
             axios.post(`http://localhost:5050/api/search`,{category,username})
             .then((res)=>{
                 navigate(`/posts/${input}`)
