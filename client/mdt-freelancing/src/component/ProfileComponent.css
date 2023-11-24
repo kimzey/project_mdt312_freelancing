@@ -12,8 +12,8 @@
   border-radius: 20px;
   padding: 20px;
   width: 50vw;
-  height: 160vh;
   margin: 2px auto 0;
+  height: auto;
 }
 
 
@@ -87,19 +87,76 @@
   margin-right: 67%;
   margin-top: 50px;
   color: #333;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .Profile  .Exp2  {
   margin-right: 67%;
   margin-top: 50px;
   color: #333;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
+
+.Profile  .Exp3  {
+  margin-right: 67%;
+  margin-top: 50px;
+  color: #333;
+  font-size: 1rem;
+}
+
 
 .Profile .info{
   width: 100%;
-  
+  height: auto;
+}
+
+.Profile .Portfoliocontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(254, 254, 254);
+  border-radius: 20px;
+  padding: 20px;
+  width: 50vw;
+  height: 140vh;
+  margin: 30px auto 0;
+}
+
+.Profile #showport {
+  height: 100%;
+  width: 100%;
+}
+
+.Profile button:hover {
+  background-color: #807cf9;
+}
+
+.Profile button:active {
+  scale: 0.9;
+}
+
+.Profile #Edit_profile {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.Profile #btn_edit {
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+.Profile button {
+  background-color: #5c59c3;
+  color: white;
+  padding: 15px;
+  border: none;
+  font-size: 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 20px auto;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
 }
 
 
