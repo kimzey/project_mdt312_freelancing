@@ -8,7 +8,7 @@ import ReactQuill from "react-quill"
 import 'react-quill/dist/quill.snow.css';
 import Swal from "sweetalert2"
 
-export default function ProfileComponent() {
+export default function EditProfile() {
 
   const ImageRef = useRef(null);
 
@@ -109,10 +109,10 @@ export default function ProfileComponent() {
   return (
     <>
       <Navbar imgchage={imgchage} ></Navbar>
-      <div className="Profile">
+      <div className="EditProfile">
       
 
-        <div className="Profilecontainer2">
+        <div className="EditprofilePcontainer">
           <h1 id="text2">แก้ไข Profile</h1>
 
           <br />
@@ -141,7 +141,7 @@ export default function ProfileComponent() {
             <input type="password" id="Password_old" name="Password_old" value={Password_old} onChange={(e)=>setPassword_old(e.target.value)} />
 
             <label >เปลี่ยนรหัสผ่าน :</label>
-            <input type="password" id="Password_new" name="Password_new" value={password} onChange={(e)=>setpassword(e.target.value)} />
+            <input type="password" id="Password_S" name="Password_new" value={password} onChange={(e)=>setpassword(e.target.value)} />
 
             {(Password_old!=User.password)&&(Password_old != "")
             ?<p id="err">* Password ไม่เหมือนกัน</p>
@@ -176,12 +176,11 @@ export default function ProfileComponent() {
                 />
           </div>
 
-          <div className="Exp2">
+          <div className="Exp2Link">
             <h1 id="Exp2"> Link Portfolio </h1>
-            <input type="text" value={link_html}
-            onChange={(e)=>setlink_html(e.target.value)}>
-            </input>
-            
+            <input type="text" className="Linkhtml"  value={link_html}
+             onChange={(e)=>setlink_html(e.target.value)}>
+             </input>
           </div>
 
           <div className="form-button" >

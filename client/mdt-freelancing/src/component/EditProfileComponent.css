@@ -1,150 +1,145 @@
-.Profile .Profilecontainer2 {
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    padding: 20px;
-    width: 50vw;
-    margin: 10px auto 0;
-  }
-  
-  
-  .Profile #text2 {
-    text-align: center;
-  }
-  
-  .Profile #browsePic2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .Profile #displayPic2 {
-    cursor: pointer;
-    max-width: 150px;
-    margin-bottom: 10px;
-    border: 2px solid #3498db;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  
-  .Profile #displayPic2 img {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .Profile .about2 {
-    font-size: 20px;
-  }
-  
-  .Profile .about2 label {
-    display: block;
-    margin-bottom: 20px;
-  }
-  
-  .Profile .about2 input,
-  .Profile .about2 select {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 15px;
-    font-size: 20px;
-  }
+.EditProfile {
+  background: linear-gradient(to right, #5c59c3, #9ad3cc);
+  height: 100%;
+  padding: 4rem;
+}
 
-  .Profile #err{
-    color: red;
-    font-weight: bold;
-  }
-  
-  .Profile .about2 p {
-    margin: 10px 0;
-  }
-  
-  .Profile #Tel2 {
-    font-weight: bold;
-  }
-  
-  .Profile .about2 {
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
-  .Profile .Exp2 h1 {
-    text-align: center;
-    display: block;
-    margin-bottom: 16px;
-    color: #333;
-    font-size: 1rem;
-  }
-  
-  .Profile #Expinput {
-    display: flex;
-    width: calc(100% - 20px);
-    height: 150px;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 16px;
-    border: 2px solid #ccc;
-    border-radius: 15px;
-    font-size: 20px;
-    resize: none;
-    overflow: auto;
-  }
-  
-  .Profile button {
-    background-color: #5c59c3;
-    color: white;
-    padding: 15px;
-    border: none;
-    font-size: 25px;
-    border-radius: 30px;
-    cursor: pointer;
-    margin: 20px auto;
-    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
-  }
-  
-  .Profile button:hover {
-    background-color: #807cf9;
-  }
-  
-  .Profile button:active {
-    scale: 0.9;
-  }
-  
-  .Profile .Portfoliocontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(254, 254, 254);
-    border-radius: 20px;
-    padding: 20px;
-    width: 50vw;
-    height: 140vh;
-    margin: 30px auto 0;
-  }
-  
-  .Profile #showport{
-    height: 100%;
-    width: 100%;
-     
-    }
-  .Profile #Edit_profile{
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-  }
-  .Profile #btn_edit{
-    margin: 0;
-    padding: 1rem 2rem;
-  }
+.EditProfile .EditprofilePcontainer {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 20px;
+  width: 50vw;
+  margin: 10px auto 0;
+}
 
-  .Profile #Exp2,
+.EditProfile #text2 {
+  text-align: center;
+}
+
+.EditProfile #browsePic2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.EditProfile #displayPic2 {
+  cursor: pointer;
+  max-width: 150px;
+  margin-bottom: 10px;
+  border: 2px solid #3498db;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.EditProfile #displayPic2 img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.EditProfile .about2 {
+  font-size: 20px;
+}
+
+.EditProfile .about2 label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.EditProfile .about2 input,
+.EditProfile .about2 select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.EditProfile #err {
+  color: red;
+  font-weight: bold;
+}
+
+.EditProfile .about2 p {
+  margin: 10px 0;
+}
+
+.EditProfile #Tel2 {
+  font-weight: bold;
+}
+
+.EditProfile .about2 {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.EditProfile .Exp2 h1 {
+  text-align: center;
+  display: block;
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.EditProfile .Exp2Link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.EditProfile .Exp2Link input{
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  margin-top: 10px;
+}
+
+.EditProfile #Expinput {
+  display: flex;
+  width: calc(100% - 20px);
+  height: 150px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  font-size: 20px;
+  resize: none;
+  overflow: auto;
+}
+
+.EditProfile button {
+  background-color: #5c59c3;
+  color: white;
+  padding: 15px;
+  border: none;
+  font-size: 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 20px auto;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.EditProfile button:hover {
+  background-color: #807cf9;
+}
+
+.EditProfile button:active {
+  scale: 0.9;
+}
+
+
+
+.EditProfile #Exp2,
 #Exp3,
 #Exp4 {
   margin-top: 40px;
@@ -153,71 +148,65 @@
   margin-right: 10px;
 }
 
-  /* CSS สำหรับไอแพด */
+/* CSS สำหรับไอแพด */
 @media only screen and (max-width: 950px) {
-.Profile .Profilecontainer2 {
-        width: 80%;
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 20px;
-        height: auto;
-      }
+  .EditProfile .Profilecontainer2 {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    height: auto;
+  }
 
- .Profile #displayPic2 {
-        max-width: 120px;
-        margin-bottom: 10px;
-        border-radius: 50%;
-        overflow: hidden;
-    }
+  .EditProfile #displayPic2 {
+    max-width: 120px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
 
-    .Profile .about2 input,
-    .Profile .about2 select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 16px;
-      box-sizing: border-box;
-      border: 2px solid #ccc;
-      border-radius: 15px;
-      font-size: 20px;
-    }
+  .EditProfile .about2 input,
+  .EditProfile .about2 select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    font-size: 20px;
+  }
 
-    .Profile #Email,
-    .Profile #Tel,
-    .Profile #Birthday,
-    .Profile #Name,
-    .Profile .Exp,
-    .Profile #Exp2,
-    .Profile #Exp3,
-    .Profile #Exp4 {
-      text-align: center;
-      margin: 10px 0;
-      font-size: 1.3rem;
-    }
-
+  .EditProfile #Email,
+  .EditProfile #Tel,
+  .EditProfile #Birthday,
+  .EditProfile #Name,
+  .EditProfile .Exp,
+  .EditProfile #Exp2,
+  .EditProfile #Exp3,
+  .PEditProfile #Exp4 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.3rem;
+  }
 }
-
-
 
 /* โทสับ */
 @media only screen and (max-width: 560px) {
-    .Profile .Profilecontainer2 {
-        width: 80%;
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 20px;
-        height: auto;
-      }
+  .EditProfile .Profilecontainer2 {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    height: auto;
+  }
 
-      .Profile #displayPic2 {
-        max-width: 100px;
-        margin-bottom: 10px;
-      }
+  .EditProfile #displayPic2 {
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
 
-      .Profile .about2 input,
-      .Profile .about2 select {
-        width: 100%;
-      }
-    
-
-  
+  .EditProfile .about2 input,
+  .EditProfile .about2 select {
+    width: 100%;
+  }
 }

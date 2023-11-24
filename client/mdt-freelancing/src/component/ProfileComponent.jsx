@@ -77,19 +77,20 @@ export default function ProfileComponent() {
           </div>
           
         <div className="info">
+
             <div className="Exp1">
-                <h1>ability</h1>
+                <h1>Ability</h1>
                 {Parser().parse(User.ability)}
             </div>
             
             <div className="Exp2">
-                <h1>education</h1>
-                {Parser().parse(User.education)}
+                <h1>Experience</h1>
+                {Parser().parse(User.experience)}
             </div>
 
             <div className="Exp3">
-                <h1>experience</h1>
-                {Parser().parse(User.experience)}
+                <h1>Education</h1>
+                {Parser().parse(User.education)}
             </div>
         </div>
       
@@ -98,7 +99,7 @@ export default function ProfileComponent() {
 
        {User.link_html && (
           <div className="Portfoliocontainer">
-            <h1 id="text2"> MY WEB </h1>
+            <h1 id="text2"> My Web </h1>
             <iframe src={User.link_html} id="showport">  </iframe>
           </div>
        )}
