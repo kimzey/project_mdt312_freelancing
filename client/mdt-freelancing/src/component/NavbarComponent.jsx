@@ -50,7 +50,8 @@ export default function Navbar(props) {
             console.log(User);
             const username = "guest"
             if(User){
-                username = User.username
+                console.log(User);
+                const username = User.username
             }
             axios.post(`http://localhost:5050/api/search`,{category,username})
             .then((res)=>{
