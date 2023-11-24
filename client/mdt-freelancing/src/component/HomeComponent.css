@@ -53,14 +53,22 @@
 
 .Home .square {
   width: 20%;
-  background-color: #D9D9D9;
-  border-radius: 35px;
+  background-color: #57576d; 
+  border-radius: 15px; 
   text-align: center;
-  margin: 0 auto; 
-  padding: 20px; 
+  margin: 0 auto;
+  padding: 20px;
   font-size: 3rem;
   font-weight: bold;
   margin-top: 50px;
+  color: white; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out; /* เพิ่มเอฟเฟกต์ transition */
+}
+
+.Home .square:hover {
+  background-color: #8a8ab4; 
+  transform: scale(1.05); 
 }
 
 .Home .squarecontainer {

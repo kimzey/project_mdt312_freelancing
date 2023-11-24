@@ -137,8 +137,6 @@
   scale: 0.9;
 }
 
-
-
 .EditProfile #Exp2,
 #Exp3,
 #Exp4 {
@@ -146,6 +144,18 @@
   color: #333;
   font-size: 1.3rem;
   margin-right: 10px;
+}
+
+.EditProfile .form-button1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.EditProfile .form-button1 input {
+  border-radius: 20px;
 }
 
 /* CSS สำหรับไอแพด */

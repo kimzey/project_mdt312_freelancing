@@ -174,7 +174,7 @@ export default function EditProfile() {
              </input>
           </div>
 
-          <div className="form-button" >
+          <div className="form-button1" >
             <input type="file" onChange={set_pdf}></input>
           </div>
 

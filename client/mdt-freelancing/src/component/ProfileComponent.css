@@ -108,6 +108,7 @@
 .Profile .info{
   width: 100%;
   height: auto;
+  
 }
 
 .Profile .Portfoliocontainer {
@@ -219,56 +220,117 @@
     resize: none;
     overflow: auto;
   }
+
+  .Profile #showport {
+    height: 100%;
+    width: 100%;
+  }
 }
 
-/*โทสับ*/
+/* โทสับ */
 @media only screen and (max-width: 560px) {
-  .Profile .Profilecontainer {
-    width: 90vw;
-    height: auto;
-    margin-top: 20px;
+  .Profile {
+    padding: 2rem;
   }
 
+  .Profile .Profilecontainer,
   .Profile .Portfoliocontainer {
-    width: 90vw;
-
-    height: 25%;
-    margin-top: 20px;
+    width: 90%;
+    padding: 1rem;
+    margin: 10px auto;
+    border-radius: 20px;
   }
 
   .Profile #displayPic {
     max-width: 100px;
     margin-bottom: 10px;
+    border-radius: 50%;
+    overflow: hidden;
   }
+
+  .Profile #displayPic img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  .Profile #Age{
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .Profile #Name{
+    display: block;
+    text-align: center;
+  }
+
+  .Profile #Yse
 
   .Profile #Surname,
-  .Profile #Age {
-    font-size: 1.2rem;
-    margin-left: 20px;
-  }
-
-  .Profile #Username {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-
-  .Profile .Exp {
-    margin-right: 0;
-  }
-
-  .Profile #Birthday,
-  .Profile #Name,
+  .Profile #Email,
+  .Profile #Tel,
   .Profile #Surname {
-    margin-right: 0;
-  }
-
-  .Profile #text2 {
+    font-size: auto;
+    margin: 20px 0;
     text-align: center;
+    width: auto;
+    height: auto;
   }
 
-  .Profile #Expinput {
+  .Profile #Birthday{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+
+  .Profile .Exp1,
+  .Profile .Exp2,
+  .Profile .Exp3 {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  .Profile .info {
+    width: 100%;
+    height: auto;
+  }
+
+  .Profile .Portfoliocontainer {
+    width: 90%;
+    padding: 1rem;
+    margin: 20px auto;
+    border-radius: 20px;
+  }
+
+  .Profile #showport {
     height: auto;
     width: 100%;
   }
+
+  .Profile #Edit_profile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .Profile #btn_edit {
+    margin: 0;
+    padding: 1rem 2rem;
+  }
+
+  .Profile button {
+    margin: 20px 0;
+    font-size: 1rem;
+    padding: 10px;
+  }
 }
+
+
+
