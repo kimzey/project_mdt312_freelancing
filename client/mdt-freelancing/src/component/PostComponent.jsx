@@ -22,7 +22,6 @@ export default function PostCompornent() {
     const [content_img,setContent_img] = useState({})
     const [page_number,setPage_number] = useState(0)
     const [blogs,setblogs] = useState([])
-
     const fetchuser = async () =>{
         if(login_user !== false && user == undefined){
             await axios.get(`http://localhost:5050/api/user/${login_user}`)

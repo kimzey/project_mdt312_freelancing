@@ -8,7 +8,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar(props) {
-
+    const imgchage = props.imgchage
     const navigate = useNavigate();
 
     const [input,Setinput] = useState("")
@@ -23,7 +23,7 @@ export default function Navbar(props) {
 
     useEffect(()=>{
         fetchuser()
-    },[props])
+    },[imgchage])
 
     const fetchuser = async () =>{
             await axios.get(`http://localhost:5050/api/user/${login_user}`)
@@ -43,12 +43,24 @@ export default function Navbar(props) {
     }
     
     const submit_search = () =>{
-        navigate(`/posts/${input}`)
+        const category = input
+        const username = User.username
+
+        if(category != null && category != " " && category != []){
+            console.log("test");
+            axios.post(`http://localhost:5050/api/search`,{category,username})
+            .then((res)=>{
+                navigate(`/posts/${input}`)
+            })
+            .catch(err=>{
+                alert(err)
+            })
+        }
     }
 
     const enter_search = (e) =>{
         if (e.key === 'Enter') {
-            navigate(`/posts/${input}`)
+            submit_search()
           }
     }
 

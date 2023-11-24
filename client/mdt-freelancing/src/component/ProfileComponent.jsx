@@ -5,12 +5,14 @@ import { useState ,useEffect} from "react";
 import axios from "axios";
 import { Parser } from 'html-to-react'
 import { useNavigate,useParams } from "react-router-dom";
+import {getUser} from "../services/auth"
 
 export default function ProfileComponent() {
   const navigate = useNavigate();
 
   const [User,setUser] = useState("")
-  const [login_user,Setlogin_user] = useState(useParams().tag)
+  const [selectUser,setselectUser] = useState(useParams().tag)
+  const [login_user,Setlogin_user] = useState(getUser())
   const [age,setAge] = useState(0)
 
   useEffect(()=>{
@@ -19,11 +21,9 @@ export default function ProfileComponent() {
   },[])
 
   const fetchuser = async () =>{
-    console.log(login_user);
-      if(login_user !== false && User == ""){
-          await axios.get(`http://localhost:5050/api/user/${login_user}`)
+      if(selectUser !== false && User == ""){
+          await axios.get(`http://localhost:5050/api/user/${selectUser}`)
           .then((response) => {
-              console.log(response.data);
               setUser(response.data)
               getAge(response.data.birhday)
           })
@@ -33,16 +33,15 @@ export default function ProfileComponent() {
       }
   }
 
-  const getAge = (birhday)=>{
-    const time = new Date(birhday)
-    const timex = new Date()
+  const getAge = async (birhday) =>{
+    const time = await new Date(birhday)
+    const timex = await new Date()
     const cal_age = timex - time
   
     const millisecondsPerYear = 31536000000; // 1 ปีมีประมาณ 31536000000 มิลลิวินาที
-    const ageYears = Math.floor(cal_age / millisecondsPerYear);
-    setAge(ageYears)
+    const ageYears = await Math.floor(cal_age / millisecondsPerYear);
+    await setAge(ageYears)
   }
-
 
   return (
     <>
@@ -51,7 +50,7 @@ export default function ProfileComponent() {
 
         <div className="Profilecontainer">
 
-          {User && (
+          {login_user == User.username && (
             <div id="Edit_profile">
                   <button id="btn_edit" onClick={()=>navigate("/profile/edit/kimzey1")}>Edit</button>
             </div>

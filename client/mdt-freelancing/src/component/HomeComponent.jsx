@@ -1,8 +1,29 @@
 import "./HomeComponent.css";
 import Navbar from "./NavbarComponent";
 import logo_img from "../assets/logo.png";
+import { useState ,useEffect } from "react";
+import axios from "axios";
 
 export default function Home() {
+  
+  const [category,setCategory] = useState([])
+
+  useEffect(()=>{
+    fetchcategory()
+  },[])
+
+  const fetchcategory = async () =>{
+    await axios.get(`http://localhost:5050/api/search/gettop5`)
+    .then((response) => {
+        setCategory(response.data)
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+  }
+  
+  console.log(category);
+
   return (
   <>
    <Navbar></Navbar>
@@ -23,10 +44,13 @@ export default function Home() {
         <p id="text2">งานที่แนะนำ</p>
 
         <div className="squarecontainer">
-          <p className="square"> ... </p>
-          <p className="square"> ... </p>
-          <p className="square"> ... </p>
-          <p className="square"> ... </p>
+
+          {category.map((blog)=>(
+            <div className="square" key={blog._id}>
+              <p>งาน : {blog._id}</p> 
+              <p>จำนวน : {blog.total} ครั้ง</p></div>
+          ))}
+
         </div>
       </div>
 

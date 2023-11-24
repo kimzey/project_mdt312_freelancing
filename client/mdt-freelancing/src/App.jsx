@@ -9,6 +9,7 @@ import { useEffect ,useState} from "react";
 import PostComponent from "./component/PostComponent";
 import ProfileComponent from "./component/ProfileComponent.jsx"
 import EditProfileComponent from "./component/EditProfileComponent.jsx"
+import About from "./component/AboutComponent.jsx"
 function App() {
 
   const [user,setUser] = useState(getUser())

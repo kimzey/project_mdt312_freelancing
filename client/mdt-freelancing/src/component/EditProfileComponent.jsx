@@ -16,7 +16,6 @@ export default function ProfileComponent() {
   const [login_user,Setlogin_user] = useState(getUser())
 
   const [name,setname] = useState("")
-  const [Password_old,setPassword_old] = useState("")
   const [password,setpassword] = useState("")
   const [experience,setexperience] = useState("")
   const [education,seteducation] = useState("")
@@ -77,7 +76,6 @@ export default function ProfileComponent() {
         setname_pdf(e.target.files[0])
     }   
     const submit_edit = async () =>{
-        if(Password_old === User.password){
             await axios.put(`http://localhost:5050/api/user/${login_user}`,{name,password,ability,education,experience,link_html,name_pdf})
             .then(async (res)=>{
                 console.log(res);
@@ -103,7 +101,6 @@ export default function ProfileComponent() {
             .catch((err)=>{
                 console.log(err.response.data.error);
             })
-        }
     }
 
   return (
@@ -137,15 +134,9 @@ export default function ProfileComponent() {
             <label >ชื่อ :</label>
             <input type="text" id="Name2" name="Name" value={name} onChange={(e)=>setname(e.target.value)}/>
 
-            <label >รหัสผ่านเดิม :</label>
-            <input type="password" id="Password_old" name="Password_old" value={Password_old} onChange={(e)=>setPassword_old(e.target.value)} />
-
             <label >เปลี่ยนรหัสผ่าน :</label>
             <input type="password" id="Password_new" name="Password_new" value={password} onChange={(e)=>setpassword(e.target.value)} />
 
-            {(Password_old!=User.password)&&(Password_old != "")
-            ?<p id="err">password ไม่เหมือนกัน</p>
-            :<></>}
 
           </div>
 
