@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "./ProfileComponent.css";
+import "./EditProfileComponent.css";
 import Navbar from "./NavbarComponent";
 import axios from "axios";
 import { useState ,useEffect} from "react";
