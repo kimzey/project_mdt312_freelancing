@@ -35,26 +35,48 @@
     line-height: 1.8;
   }
 
+/*  ไอแพด */
+@media only screen and  (max-width: 950px) {
+  .Detailsabout {
+    max-width: 70vw;
+  }
+
+  #logo {
+    width: 250px; 
+  }
+
+  #head {
+    font-size: 2.5rem; 
+    margin-top: 8px; 
+  }
+
+  #text1 {
+    font-size: 1.3rem; 
+    margin-top: 15px; 
+    line-height: 1.6; 
+  }
+}
+
 /* โทสับ */
 @media only screen and (max-width: 560px) {
-    .Detailsabout {
-      padding: 10px; /* ปรับขนาด padding เพื่อให้สามารถให้ข้อมูลแสดงผลได้ดีในขนาดหน้าจอเล็ก */
-      margin: 10px; 
-    }
-  
-    #logo {
-      width: 200px; 
-    }
-  
-    #head{
-      font-size: 2rem; 
-      margin-top: 5px;
-    }
-  
-    #text1 {
-      font-size: 1.2rem; 
-      margin-top: 15px; 
-      line-height: 1.5; 
-    }
+  .Detailsabout {
+    max-width: 80vw; 
+    padding: 10px;
+    margin: 10px;
+  }
+
+  #logo {
+    width: 150px;
+  }
+
+  #head {
+    font-size: 2rem; 
+    margin-top: 5px;
+  }
+
+  #text1 {
+    font-size: 1rem; 
+    margin-top: 10px; 
+    line-height: 1.4; 
+  }
 }
-  
