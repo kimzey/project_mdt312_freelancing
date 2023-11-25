@@ -46,8 +46,8 @@ export default function Navbar(props) {
         const category = input
 
         if(category != null && category != " " && category != []){
-            console.log("test");
-            console.log(User);
+            // console.log("test");
+            // console.log(User);
             const username = "guest"
             if(User){
                 console.log(User);

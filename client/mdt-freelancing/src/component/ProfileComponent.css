@@ -74,13 +74,21 @@
 .Profile #Edit_profile {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: end;
 }
 
 .Profile #btn_edit {
   margin: 0;
   padding: 1rem 2rem;
+}
+.Profile #btn_save {
+  margin: 0;
+  padding: 1rem 2rem;
+  background-color: rgb(247, 86, 86);
+}
+.Profile #btn_save:hover {
+  opacity: 0.9;
 }
 
 .Profile button {

@@ -4,10 +4,13 @@ import logo_img from "../assets/logo.png";
 import { useState ,useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {getUser} from "../services/auth"
 
 export default function Home() {
   const navigate = useNavigate();
+
   const [category,setCategory] = useState([])
+  const [username,setusername] = useState(getUser()||"guset")
 
   useEffect(()=>{
     fetchcategory()
@@ -23,7 +26,16 @@ export default function Home() {
     })
   }
   
-  console.log(category);
+  const submit_search = (category) =>{
+      // console.log(category);
+      axios.post(`http://localhost:5050/api/search`,{category,username})
+      .then((res)=>{
+        navigate(`/posts/${category}`)
+      })
+      .catch(err=>{
+          console.log(err)
+      })
+  }
 
   return (
   <>
@@ -47,7 +59,7 @@ export default function Home() {
         <div className="squarecontainer">
 
           {category.map((blog)=>(
-            <div className="square" key={blog._id} onClick={()=>navigate(`/posts/${blog._id}`)}>
+            <div className="square" key={blog._id} onClick={()=>submit_search(blog._id)}>
               <p className="text_job">งาน : {blog._id}</p> 
               <p className="text_job">จำนวน : {blog.total} ครั้ง</p> 
             </div>

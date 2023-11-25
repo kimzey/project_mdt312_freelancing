@@ -10,6 +10,7 @@ import PostComponent from "./component/PostComponent";
 import ProfileComponent from "./component/ProfileComponent.jsx"
 import EditProfileComponent from "./component/EditProfileComponent.jsx"
 import AboutComponent from "./component/AboutComponent.jsx"
+import SaveComponent from "./component/SaveComponent.jsx"
 function App() {
 
   const [user,setUser] = useState(getUser())
@@ -31,6 +32,7 @@ function App() {
         <Route path="/posts/:category" element={<PostComponent/>}/>
         <Route path="/Profile/:tag" element={<ProfileComponent/>}/>
         <Route path="/Profile/edit/:tag" element={<EditProfileComponent/>}/>
+        <Route path="/Profile/save/:tag" element={<SaveComponent/>}/>
     </Routes> 
   </BrowserRouter>
   )

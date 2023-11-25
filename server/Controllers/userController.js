@@ -100,6 +100,14 @@ exports.update = (req,res)=>{
     const {username} = req.params
     const {name,password,ability,education,experience,link_html} = req.body
     // console.table({name,email,tel,username,password,details,birhday,is_admin});
+    console.log(password);
+    
+    switch(true){
+        case !password:
+            return res.status(400).json({error:"กรุณาป้อน password"})
+            break
+    }
+
     userDB.findOneAndUpdate({username},{name,password,ability,education,experience,link_html},{new:true})
     .then((result)=>{
         console.log(result);

@@ -45,4 +45,5 @@ input[type="file"]::file-selector-button {
     border-radius: 1rem;
     border: 0;
     background-color: rgb(148, 174, 245);
+    color: white;
   }

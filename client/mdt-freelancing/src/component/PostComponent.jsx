@@ -22,6 +22,7 @@ export default function PostCompornent() {
     const [content_img,setContent_img] = useState({})
     const [page_number,setPage_number] = useState(0)
     const [blogs,setblogs] = useState([])
+
     const fetchuser = async () =>{
         if(login_user !== false && user == undefined){
             await axios.get(`http://localhost:5050/api/user/${login_user}`)
@@ -56,6 +57,7 @@ export default function PostCompornent() {
         setContent(null)
         fetchblogs()
         setPage_number(0)
+        setCategory(param.category)
     },[param])
 
     const setWrite = (e)=>{
@@ -80,6 +82,7 @@ export default function PostCompornent() {
                     icon: "success"
                   });
                 setContent(null);
+                setContent_img(null);
             })
             .catch(err=>{
                 Swal.fire({
@@ -109,6 +112,7 @@ export default function PostCompornent() {
             setPage_number(page_number+1)
         }
     }
+    
   return (<>
         <Navbar></Navbar>
         <div className="post">

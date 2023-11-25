@@ -46,6 +46,19 @@ exports.getAllpost = (req,res) =>{
     })
 }
 
+exports.getAllpostbyid = (req,res) =>{
+    const {_id} = req.params
+    console.log(_id);
+    postDB.findOne({_id})
+    .then(result=>{
+        console.log(result);
+        res.json(result)})
+    .catch(err=>{
+        console.log(err);
+        res.status(400).json({error:"ไม่เจอบทความ"})
+    })
+}
+
 exports.getpost = (req,res)=>{
     const {slug} = req.params
     postDB.findOne({slug})

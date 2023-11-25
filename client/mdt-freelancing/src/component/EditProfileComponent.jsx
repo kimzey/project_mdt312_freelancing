@@ -42,6 +42,7 @@ export default function EditProfile() {
                 setProfileimg(response.data.name_img)
                 setability(response.data.ability)
                 setlink_html(response.data.link_html)
+                setpassword(response.data.password)
             })
             .catch(err=>{
                 alert(err)
@@ -100,6 +101,11 @@ export default function EditProfile() {
             })
             .catch((err)=>{
                 console.log(err.response.data.error);
+                Swal.fire({
+                  title: "แจ้งเตือน",
+                  text: err.response.data.error,
+                  icon: "error"
+                });
             })
     }
 

@@ -10,6 +10,7 @@ const userRoute = require("./routes/user")
 const postRoute = require("./routes/post")
 const loginRoute = require("./routes/login")
 const searchRoute = require("./routes/search")
+const favouriteRoute = require("./routes/favourite")
 //setup
 require("dotenv").config()
 const app = express()
@@ -31,6 +32,7 @@ app.use('/api',userRoute)
 app.use('/api',postRoute)
 app.use('/api',loginRoute)
 app.use('/api',searchRoute)
+app.use('/api',favouriteRoute)
 
 
 const port = process.env.PORT || 8080

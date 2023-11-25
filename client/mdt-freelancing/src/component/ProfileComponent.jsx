@@ -52,7 +52,8 @@ export default function ProfileComponent() {
 
           {login_user == User.username && (
             <div id="Edit_profile">
-                  <button id="btn_edit" onClick={()=>navigate("/profile/edit/kimzey1")}>Edit</button>
+                  <button id="btn_save" onClick={()=>navigate(`/profile/save/${selectUser}`)}>Job Save</button>
+                  <button id="btn_edit" onClick={()=>navigate(`/profile/edit/${selectUser}`)}>Edit</button>
             </div>
           )}
 
