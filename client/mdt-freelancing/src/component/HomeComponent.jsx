@@ -54,7 +54,7 @@ export default function Home() {
       </div>
 
       <div className="Secondcontainer">
-        <p id="text2">งานที่แนะนำ</p>
+        <p id="text2">งานยอดนิยมจากการค้นหา</p>
 
         <div className="squarecontainer">
 
