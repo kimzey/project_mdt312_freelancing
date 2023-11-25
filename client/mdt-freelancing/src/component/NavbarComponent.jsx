@@ -37,6 +37,7 @@ export default function Navbar(props) {
 
     const add_show = ()=>{
         document.body.classList.toggle("show");
+        window.scrollTo({top: 0, left: 0});
     }
     const remove_show = ()=>{
         document.body.classList = ("");

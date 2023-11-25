@@ -161,7 +161,7 @@
   .Profile #Edit_profile {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-top: 20px;
   }
@@ -184,7 +184,15 @@
     font-size: 16px;
     word-wrap:break-word;
   }
-
+  .Profile #btn_edit {
+    margin: 0;
+    padding: 1rem;
+  }
+  .Profile #btn_save {
+    margin: 0;
+    padding: 1rem;
+    background-color: rgb(247, 86, 86);
+  }
 }
 
 

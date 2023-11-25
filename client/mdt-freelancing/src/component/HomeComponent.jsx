@@ -71,8 +71,8 @@ export default function Home() {
       <footer>
         <div className="thridcontainer">
           <h2 id="contact">ติดต่อพวกเรา</h2>
-          <p>Email: info@example.com</p>
-          <p>Phone: +1 (555) 123-4567</p>
+          <p>Email: kimkung0914@gmail.com </p>
+          <p>Phone: 0954821811 </p>
         </div>
       </footer>
     </div>
