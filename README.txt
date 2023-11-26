@@ -7,9 +7,11 @@ package ที่ใช้ #ลงก่อน!!
 
 #client{
     "axios": "^1.6.1",
+    "dotenv": "^16.3.1",
     "html-to-react": "^1.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-quill": "^2.0.0",
     "react-router-dom": "^6.18.0",
     "sweetalert2": "^11.9.1"
 }
@@ -17,6 +19,7 @@ package ที่ใช้ #ลงก่อน!!
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-fileupload": "^1.4.2",
     "express-jwt": "^8.4.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.0",
