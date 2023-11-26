@@ -3,6 +3,7 @@ const express = require("express")
 const router = express.Router()
 
 const {create_search,get_search,get_searchtop} = require("../Controllers/searchController")
+const {requireLogin} = require("../Controllers/loginController")
 
 
 //router

@@ -1,6 +1,6 @@
 import "./PostComponent.css"
 import { useParams ,useNavigate } from "react-router-dom";
-import {getUser} from "../services/auth"
+import {getUser,getToken} from "../services/auth"
 import ReactQuill from "react-quill"
 import 'react-quill/dist/quill.snow.css';
 import Navbar from "./NavbarComponent";
@@ -71,10 +71,10 @@ export default function PostCompornent() {
 
     const submmit_form = async (e)=>{
         e.preventDefault();
-        await axios.post(`http://localhost:5050/api/post/create`,{content,author,category})
+        await axios.post(`http://localhost:5050/api/post/create`,{content,author,category},{headers: {authorization:`Bearer ${getToken()}`}})
         .then(async (response) => {
             const res_slut = response.data.slug
-            await axios.put(`http://localhost:5050/api/post/updatimg/${res_slut}`,{content_img}, {headers: {'Content-Type': 'multipart/form-data'}})
+            await axios.put(`http://localhost:5050/api/post/updatimg/${res_slut}`,{content_img}, {headers: {'Content-Type': 'multipart/form-data',authorization:`Bearer ${getToken()}`}})
             .then((res) => {
                 Swal.fire({
                     title: "แจ้งเตือน",

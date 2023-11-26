@@ -2,7 +2,8 @@
 const express = require("express")
 const router = express.Router()
 
-const {create,get_token,get_username,getall,login,logout} = require("../Controllers/loginController")
+const {create,get_token,get_username,getall,login,logout,requireLogin} = require("../Controllers/loginController")
+
 
 
 //router
