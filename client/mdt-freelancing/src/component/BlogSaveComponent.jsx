@@ -4,6 +4,7 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import {getUser,getToken} from "../services/auth"
 
 export default function BlogSave(props){
     let {blog,fetch} = props
@@ -18,7 +19,7 @@ export default function BlogSave(props){
 
 
     const fetchblog = async () =>{
-            await axios.get(`http://localhost:5050/api/save/post/${blog.id_post}`)
+            await axios.get(`http://localhost:5050/api/save/post/${blog.id_post}`,{headers: {authorization:`Bearer ${getToken()}`}})
             .then(async (response) => {
                 await setblogsave(response.data);
                 await fetchuser(response.data.author)
@@ -42,7 +43,7 @@ export default function BlogSave(props){
 
     const submit_unsave = async (id_post)=>{
         console.log(id_post);
-        await axios.delete(`http://localhost:5050/api/favourite/delete/${id_post}`)
+        await axios.delete(`http://localhost:5050/api/favourite/delete/${id_post}`,{headers: {authorization:`Bearer ${getToken()}`}})
         .then((response) => {
             console.log(response);
             Swal.fire({

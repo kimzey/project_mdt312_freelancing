@@ -16,7 +16,26 @@
 }
 .save_com #title{
     text-align: center;
+    position: relative;
 }
+
+.save_com #back{
+    width: auto;
+}
+.save_com #btn_back{
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    top: 20%;
+    left: 25px;
+}
+.save_com #btn_back:hover{
+    opacity: 0.5;
+}
+.save_com #btn_back:active{
+    color: #6634db;
+}
+
 .save_com #profile_img{
     width: 50px;
     border-radius: 50%;

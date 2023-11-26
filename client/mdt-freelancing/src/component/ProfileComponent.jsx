@@ -15,9 +15,15 @@ export default function ProfileComponent() {
   const [login_user,Setlogin_user] = useState(getUser())
   const [age,setAge] = useState(0)
 
+  console.log(selectUser);
+
   useEffect(()=>{
+    try{
       fetchuser()
-      getAge()
+    }
+    catch(err){
+      console.log(err);
+    }
   },[])
 
   const fetchuser = async () =>{
@@ -28,7 +34,7 @@ export default function ProfileComponent() {
               getAge(response.data.birhday)
           })
           .catch(err=>{
-              alert(err)
+              console.log(err)
           })
       }
   }
@@ -43,13 +49,15 @@ export default function ProfileComponent() {
     await setAge(ageYears)
   }
 
+  // console.log(age);
+  // console.log(User);
   return (
     <>
       <Navbar></Navbar>
       <div className="Profile">
 
         <div className="Profilecontainer">
-
+          
           {login_user == User.username && (
             <div id="Edit_profile">
                   <button id="btn_save" onClick={()=>navigate(`/profile/save/${selectUser}`)}>Job Save</button>

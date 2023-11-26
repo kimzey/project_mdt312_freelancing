@@ -30,11 +30,11 @@ exports.login=(req,res)=>{
 
 }
 
-// exports.requireLogin=expressjwt({
-//     secret:process.env.JWT_SECRET,
-//     algorithms:["HS256"],
-//     userPreperty:"auth"
-// })
+exports.requireLogin=expressjwt({
+    secret:"projectwebmdt-secret@1234",
+    algorithms:["HS256"],
+    userPreperty:"auth"
+})
 
 exports.create=(req,res)=>{
     // console.log(req.body);

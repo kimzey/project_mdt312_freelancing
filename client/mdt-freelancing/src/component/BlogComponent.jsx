@@ -4,7 +4,7 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import {getUser} from "../services/auth"
+import {getUser,getToken} from "../services/auth"
 
 export default function Blog(props){
     const {blog} = props
@@ -34,7 +34,7 @@ export default function Blog(props){
     const submit_save = async (id_post,username)=>{
         // console.log(id_post);
         // console.log(login_user);
-        await axios.post(`http://localhost:5050/api/favourite/`,{id_post,username})
+        await axios.post(`http://localhost:5050/api/favourite/`,{id_post,username},{headers: {authorization:`Bearer ${getToken()}`}})
         .then((response) => {
             console.log(response);
             Swal.fire({

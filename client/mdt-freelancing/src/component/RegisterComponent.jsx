@@ -3,7 +3,11 @@ import { useState,useEffect } from "react";
 import axios from "axios"
 import Swal from "sweetalert2"
 import Navbar from "./NavbarComponent";
+import { useNavigate } from "react-router-dom";
+
 export default function Register() {
+  const navigate = useNavigate();
+
   const [state_data,SetState_data] = useState({
     name:"",
     username:"",
@@ -50,6 +54,9 @@ export default function Register() {
               text: "บันทึกข้อมูลเรียบร้อย",
               icon: "success"
             });
+            window.scrollTo({top: 0, left: 0});
+            navigate("../Login")
+            
           })
         .catch(err=>{
           Setstate_error("* "+err.response.data.error)

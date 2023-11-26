@@ -3,13 +3,14 @@ import "./EditProfileComponent.css";
 import Navbar from "./NavbarComponent";
 import axios from "axios";
 import { useState ,useEffect} from "react";
-import {getUser} from "../services/auth"
+import {getUser,getToken} from "../services/auth"
 import ReactQuill from "react-quill"
 import 'react-quill/dist/quill.snow.css';
 import Swal from "sweetalert2"
+import { useNavigate } from "react-router-dom";
 
 export default function EditProfile() {
-
+  const navigate = useNavigate();
   const ImageRef = useRef(null);
 
   const [User,setUser] = useState("")
@@ -54,7 +55,7 @@ export default function EditProfile() {
     // console.log(setProfile_img);
     const profile_img = e.target.files[0];
     console.log(profile_img);
-    await axios.put(`http://localhost:5050/api/user/updatimg/${login_user}`,{profile_img}, {headers: {'Content-Type': 'multipart/form-data'}})
+    await axios.put(`http://localhost:5050/api/user/updatimg/${login_user}`,{profile_img}, {headers: {'Content-Type': 'multipart/form-data',authorization:`Bearer ${getToken()}`}})
             .then((res) => {
                 Swal.fire({
                     title: "แจ้งเตือน",
@@ -77,11 +78,11 @@ export default function EditProfile() {
         setname_pdf(e.target.files[0])
     }   
     const submit_edit = async () =>{
-            await axios.put(`http://localhost:5050/api/user/${login_user}`,{name,password,ability,education,experience,link_html,name_pdf})
+            await axios.put(`http://localhost:5050/api/user/${login_user}`,{name,password,ability,education,experience,link_html,name_pdf},{headers: {authorization:`Bearer ${getToken()}`}})
             .then(async (res)=>{
                 console.log(res);
                 console.log(name_pdf);
-                await axios.put(`http://localhost:5050/api/user/updatpdf/${login_user}`,{name_pdf}, {headers: {'Content-Type': 'multipart/form-data'}})
+                await axios.put(`http://localhost:5050/api/user/updatpdf/${login_user}`,{name_pdf}, {headers: {'Content-Type': 'multipart/form-data',authorization:`Bearer ${getToken()}`}})
                 .then((res) => {
                     console.log(res);
                     Swal.fire({
@@ -114,8 +115,9 @@ export default function EditProfile() {
       <Navbar imgchage={imgchage} ></Navbar>
       <div className="EditProfile">
       
-
         <div className="EditprofilePcontainer">
+          
+          <i id="btn_back" onClick={()=>navigate(`../profile/${login_user}`)}>&larr;</i>
           <h1 id="text2">แก้ไข Profile</h1>
 
           <br />
