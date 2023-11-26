@@ -62,7 +62,9 @@ export default function SaveCompornent() {
 
             <div className="save_container">
 
+
                 <div className="box" id="title">
+                    {/* <i id="btn_back" onClick={()=>navigate(`../profile/${login_user}`)}>&larr;</i> */}
                     <h1>SAVE BY : {JSON.stringify(login_user)}</h1>
                 </div>
 

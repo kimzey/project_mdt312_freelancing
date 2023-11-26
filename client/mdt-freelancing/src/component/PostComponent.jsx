@@ -163,7 +163,7 @@ export default function PostCompornent() {
                 ) 
                 : <h1>ไม่พบบทความ</h1> }
 
-                {blogs.length >0 
+                {blogs.length >3
                 ?(<div className="btn_page">
                     <button className="btn_pages" onClick={reduce_pagenumber}>Back</button>
                     <h1>{page_number+1}</h1>

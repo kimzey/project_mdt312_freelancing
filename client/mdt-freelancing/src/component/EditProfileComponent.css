@@ -163,7 +163,16 @@
 .EditProfile #btn_pdf:active{
   scale: 0.9;
 }
-
+.EditProfile #btn_back{
+  cursor: pointer;
+  font-size: 2rem;
+}
+.EditProfile #btn_back:hover{
+  opacity: 0.5;
+}
+.EditProfile #btn_back:active{
+  color: #6634db;
+}
 
 /* CSS สำหรับไอแพด */
 @media only screen and (max-width: 950px) {
@@ -233,5 +242,8 @@
   }
   .text_exp p{
     font-size: 20px;
+  }
+  .EditProfile #btn_back{
+    display: none;
   }
 }

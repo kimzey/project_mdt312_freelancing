@@ -7,9 +7,10 @@ import {getUser} from "../services/auth"
 import ReactQuill from "react-quill"
 import 'react-quill/dist/quill.snow.css';
 import Swal from "sweetalert2"
+import { useNavigate } from "react-router-dom";
 
 export default function EditProfile() {
-
+  const navigate = useNavigate();
   const ImageRef = useRef(null);
 
   const [User,setUser] = useState("")
@@ -114,8 +115,9 @@ export default function EditProfile() {
       <Navbar imgchage={imgchage} ></Navbar>
       <div className="EditProfile">
       
-
         <div className="EditprofilePcontainer">
+          
+          <i id="btn_back" onClick={()=>navigate(`../profile/${login_user}`)}>&larr;</i>
           <h1 id="text2">แก้ไข Profile</h1>
 
           <br />
